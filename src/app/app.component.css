@@ -1,0 +1,32 @@
+.example-form {
+  min-width: 250px;
+  max-width: 500px;
+  /*width: 50%;*/
+}
+
+.example-full-width {
+  min-width: 250px;
+  /*width: 50%;*/
+}
+
+.start-stop {
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(220, 218, 8);
+}
+
+.end-stop {
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(220, 218, 8);
+}
+
+.part-time {
+  padding-top: 4px;
+  padding-left: 5px;
+  color: rgb(220, 218, 8);
+}
+
+agm-map {
+  height: 600px;
+}
