@@ -4,154 +4,126 @@
       <p-panel header="Dane wejściowe" [style]="{'margin-bottom':'20px'}">
         <div class="ui-g">
           <div class="ui-g-6">
-            <span class="ui-float-label" style="margin-top: 30px">
+            <span class="ui-float-label" style="margin-top: 15px; margin-bottom: 40px">
               <input id="float-input" type="text" size="50" pInputText>
               <label for="float-input">Sekwencja 1</label>
             </span>
-            <span class="ui-float-label" style="margin-top: 30px">
+            <span class="ui-float-label" style="margin-bottom: 40px">
               <input id="float-input2" type="text" size="50" pInputText>
               <label for="float-input2">Sekwencja 2</label>
             </span>
-            <span class="ui-float-label" style="margin-top: 30px">
+            <span class="ui-float-label" style="margin-bottom: 40px">
               <input id="float-input3" type="text" size="50" pInputText>
               <label for="float-input3">Sekwencja 3</label>
             </span>
           </div>
           <div class="ui-g-6">
-            <p-table>
-              <ng-template pTemplate="header">
-                <tr>
-                  <th>A</th>
-                  <th>B</th>
-                  <th>D</th>
-                  <th>C</th>
-                </tr>
-              </ng-template>
-              <ng-template pTemplate="body">
-                <tr>
-                  <td>12</td>
-                  <td>-12</td>
-                  <td>23</td>
-                  <td>-4</td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>-12</td>
-                  <td>23</td>
-                  <td>-4</td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>-12</td>
-                  <td>23</td>
-                  <td>-4</td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>-12</td>
-                  <td>23</td>
-                  <td>-4</td>
-                </tr>
-              </ng-template>
-            </p-table>
+            <div class="ui-g-6">
+              <p-table [value]="cells">
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th></th>
+                    <th>A</th>
+                    <th>G</th>
+                    <th>C</th>
+                    <th>T</th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-cell>
+                  <tr style="text-align: center">
+                    <td class="primeng-panel-color">{{cell.label}}</td>
+                    <td pEditableColumn>
+                      <p-cellEditor>
+                        <ng-template pTemplate="input">
+                          <input type="text" [(ngModel)]="cell.valueA">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                          {{cell.valueA}}
+                        </ng-template>
+                      </p-cellEditor>
+                    </td>
+                    <td pEditableColumn>
+                      <p-cellEditor>
+                        <ng-template pTemplate="input">
+                          <input type="text" [(ngModel)]="cell.valueG">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                          {{cell.valueG}}
+                        </ng-template>
+                      </p-cellEditor>
+                    </td>
+                    <td pEditableColumn>
+                      <p-cellEditor>
+                        <ng-template pTemplate="input">
+                          <input type="text" [(ngModel)]="cell.valueC">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                          {{cell.valueC}}
+                        </ng-template>
+                      </p-cellEditor>
+                    </td>
+                    <td pEditableColumn>
+                      <p-cellEditor>
+                        <ng-template pTemplate="input">
+                          <input type="text" [(ngModel)]="cell.valueT">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                          {{cell.valueT}}
+                        </ng-template>
+                      </p-cellEditor>
+                    </td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+        </div>
+      </p-panel>
+    </div>
+    <div class="ui-g-12">
+      <p-panel header="Wyniki" [style]="{'margin-bottom':'20px'}">
+        <div class="ui-g">
+          <div style="margin: 30px;">
+            <table class="result-table">
+              <!--<tr>-->
+              <!--<th>A</th>-->
+              <!--<th>A</th>-->
+              <!--<th>B</th>-->
+              <!--<th></th>-->
+              <!--</tr>-->
+              <!--<span class="result-table-label">A</span>-->
+              <!--<span class="result-table-label">A</span>-->
+              <tr class="tr-label">
+                <span class="result-table-label"></span>
+                <td><span class="result-table-label">A</span></td>
+                <td><span class="result-table-label">A</span></td>
+                <td><span class="result-table-label">A</span></td>
+              </tr>
+              <tr>
+                <span></span>
+                <td>-12</td>
+                <td>-10</td>
+                <td>-8</td>
+                <td>-12</td>
+              </tr>
+              <tr>
+                <span class="result-table-label">A</span>
+                <td>-10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <span class="result-table-label">A</span>
+                <td>-8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
           </div>
         </div>
       </p-panel>
     </div>
   </div>
-
-
-
-
-    <!--<div fxFlex="25" fxFlex.xs="55" style="background-color: #3f51b5; padding-left: 30px; padding-right: 30px; color: rgba(255,255,255,.87);">-->
-      <!--<div style="margin-bottom: 20px; text-align: center">-->
-        <!--LINIA AUTOBUSOWA 20-->
-      <!--</div>-->
-      <!--<div style="text-align: left">-->
-        <!--<fieldset>-->
-          <!--<div *ngFor="let option of sortedStops" style="margin-bottom: 0px;">-->
-          <!--<span-->
-            <!--[ngClass]="{'start-stop' : option.id === model.start.stop.id,-->
-                      <!--'end-stop' : option.id === model.end.stop.id}">-->
-            <!--{{ option.stop_name }}-->
-          <!--</span>-->
-            <!--<br>-->
-            <!--<div style="margin: 5px; display: inline-flex">-->
-              <!--<mat-icon>arrow_downward</mat-icon>-->
-              <!--<div *ngIf="option.next_stop_time != null" class="part-time">{{ option.next_stop_time | minuteSeconds }}</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</fieldset>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div fxFlex="75"  fxFlex.xs="15" style="background-color: #fafafa">-->
-      <!--<div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="10px" style="margin-top: 100px">-->
-        <!--<mat-form-field>-->
-          <!--<input matInput [matDatepicker]="picker" placeholder="Podaj datę"-->
-                 <!--(dateInput)="dateChanged('input', $event)" (dateChange)="dateChanged('change', $event)">-->
-          <!--<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
-          <!--<mat-datepicker #picker></mat-datepicker>-->
-        <!--</mat-form-field>-->
-        <!--<mat-form-field>-->
-          <!--<input matInput placeholder="Podaj godzinę" [(ngModel)]="model.timeStop"-->
-                 <!--type="time" (focusout)="timeChanged()">-->
-        <!--</mat-form-field>-->
-        <!--<mat-form-field class="example-full-width">-->
-          <!--<input type="text" placeholder="Wybierz przystanek startowy" aria-label="Number" matInput-->
-                 <!--[formControl]="startStopAutocomplete" [matAutocomplete]="auto">-->
-          <!--<mat-autocomplete #auto="matAutocomplete" (optionSelected)="autocompleteChanged($event, model.start, stops, true)">-->
-            <!--<mat-option *ngFor="let option of startStopAutocompleteOptions | async" [value]="option.stop_name">-->
-              <!--{{ option.stop_name }}-->
-            <!--</mat-option>-->
-          <!--</mat-autocomplete>-->
-        <!--</mat-form-field>-->
-        <!--<mat-form-field class="example-full-width">-->
-          <!--<input type="text" placeholder="Wybierz przystanek docelowy" aria-label="Number" matInput-->
-                 <!--[formControl]="endStopAutocomplete" [matAutocomplete]="auto2">-->
-          <!--<mat-autocomplete #auto2="matAutocomplete" (optionSelected)="autocompleteChanged($event, model.end, endStops, false)">-->
-            <!--<mat-option *ngFor="let option of endStopAutocompleteOptions | async" [value]="option.stop_name">-->
-              <!--{{ option.stop_name }}-->
-            <!--</mat-option>-->
-          <!--</mat-autocomplete>-->
-        <!--</mat-form-field>-->
-      <!--</div>-->
-      <!--<div style="text-align: center; margin-top: 50px">-->
-        <!--<button style="width: 50%" (click)="findPrediction()" mat-raised-button color="primary">Znajdź predykcje</button>-->
-      <!--</div>-->
-      <!--<div *ngIf="showPredictions" fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="10px" style="margin-top: 100px">-->
-        <!--<mat-card style="text-align: center; font-size: 23px">-->
-          <!--<span>-->
-            <!--PREDYKCJA 1-->
-          <!--</span>-->
-          <!--<br>-->
-          <!--<div style="margin-top: 10px">-->
-            <!--{{secondPrediction.seconds | minuteSeconds}}-->
-          <!--</div>-->
-        <!--</mat-card>-->
-        <!--<mat-card style="text-align: center; font-size: 23px">-->
-          <!--<span>-->
-            <!--PREDYKCJA 2-->
-          <!--</span>-->
-          <!--<br>-->
-          <!--<div style="margin-top: 10px">-->
-            <!--{{firstPrediction.seconds | minuteSeconds}}-->
-          <!--</div>-->
-        <!--</mat-card>-->
-      <!--</div>-->
-      <!--&lt;!&ndash;<div *ngIf="showPredictions" style="margin-top: 30px">&ndash;&gt;-->
-      <!--<div style="margin-top: 60px">-->
-        <!--<mat-card *ngIf="mapStops != null && mapStops.length > 0">-->
-          <!--<agm-map [latitude]="(mapStops[0].latitudeNumber)" [longitude]="(mapStops[0].longitudeNumber)" [zoom]="zoom">-->
-            <!--<agm-marker *ngFor="let m of mapStops"-->
-                        <!--[latitude]="(m.latitudeNumber)" [longitude]="(m.longitudeNumber)" [iconUrl]="m.icon_url">-->
-              <!--<agm-info-window>-->
-                <!--<span style="font-style: oblique">{{m.stop_name}}</span>-->
-                <!--<br>-->
-                <!--<strong>{{m.time_by_first_pred | minuteSeconds}}</strong>-->
-              <!--</agm-info-window>-->
-            <!--</agm-marker>-->
-          <!--</agm-map>-->
-        <!--</mat-card>-->
-      <!--</div>-->
-    <!--</div>-->
 </div>

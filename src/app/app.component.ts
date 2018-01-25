@@ -1,6 +1,5 @@
 import {Component, Pipe, PipeTransform} from '@angular/core';
-import { Prediction } from '../model/prediction';
-import { Stop } from '../model/stop';
+import { Cell } from '../model/cell';
 import {FormControl} from "@angular/forms";
 import {Observable} from "rxjs/Observable";
 import {map, startWith} from "rxjs/operators";
@@ -19,9 +18,15 @@ const FINISH_ICON = 'http://icons.iconarchive.com/icons/icons8/ios7/32/Sports-Fi
 export class AppComponent {
 
   showPredictions: boolean;
+  cells: Array<Cell>;
 
   constructor () {
-
+    this.cells = [
+      new Cell("A",1,2,3,4),
+      new Cell("G",1,2,3,4),
+      new Cell("C",1,2,3,4),
+      new Cell("T",1,2,3,4),
+    ]
   }
 
   // startStopAutocomplete: FormControl = new FormControl();
