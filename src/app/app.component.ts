@@ -5,6 +5,7 @@ import {Observable} from "rxjs/Observable";
 import {map, startWith} from "rxjs/operators";
 import {Constants} from "utils/constants"
 import {MatAutocompleteSelectedEvent, MatDatepickerInputEvent} from "@angular/material";
+import {ResultCell} from "../model/resultCell";
 
 
 @Component({
@@ -24,6 +25,9 @@ export class AppComponent {
   sequence2: string;
   sequence3: string;
   probabilityRows: Array<ProbabilityRow>;
+  sequenceStrArray: Array<string> = [];
+  currentSequence3Index: number;
+  currentResultMatrix: Array<Array<ResultCell>> = [[]];
 
   showNextStepBtn = false;
 
@@ -39,9 +43,10 @@ export class AppComponent {
     this.sequence1 = "AGCT";
     this.sequence2 = "AAAT";
     this.sequence3 = "CGAT";
+    this.currentSequence3Index = 0;
   }
 
-  setVariable(event, rowNucl, colNucl) {
+  probabilityChanged(event, rowNucl, colNucl) {
     let foundRow = this.probabilityRows.filter(row =>
       row.label === colNucl);
 
@@ -50,7 +55,11 @@ export class AppComponent {
   }
 
   runAlgorithm () {
+    this.sequenceStrArray = AppComponent.prepareSequenceStrArray(this.sequence3);
     this.showNextStepBtn = false;
+
+
+
     console.log(this.probabilityRows);
     console.log(this.sequence1);
     console.log(this.sequence2);
@@ -63,6 +72,41 @@ export class AppComponent {
 
   nextStep () {
 
+  }
+
+  currentSequence3IndexToRight() {
+    if (this.currentSequence3Index != this.sequenceStrArray.length - 1)
+      this.currentSequence3Index += 1;
+  }
+
+  currentSequence3IndexToLeft() {
+    if (this.currentSequence3Index != 0)
+      this.currentSequence3Index -= 1;
+  }
+
+  prepareResultMatrix() : Array<Array<ResultCell>> {
+    let sequence1StrArray = AppComponent.prepareSequenceStrArray(this.sequence1);
+    let sequence2StrArray = AppComponent.prepareSequenceStrArray(this.sequence2);
+    let resultMatrix: Array<Array<ResultCell>> = [];
+
+    for (let i = 0; i < sequence1StrArray.length; )
+    sequence1StrArray.forEach(rowY => {
+      let row = Array() as ResultCell[];
+      sequence2StrArray.forEach(rowX => {
+        let cell = new ResultCell(rowX, rowY, null);
+        row.push(cell);
+      });
+      resultMatrix.push(row);
+    })
+
+    return null;
+  }
+
+  static prepareSequenceStrArray (sequence: string) : string[] {
+    let strResult = [];
+    strResult.push(" ");
+    strResult.concat(sequence.trim().split(""));
+    return strResult;
   }
 
 }
