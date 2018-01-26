@@ -30,7 +30,7 @@ class MatrixNode {
 /**
  * Represents the sequence alignment controller.
  */
-class SequenceAligner {
+export class SequenceAligner {
     private seqA_: string;
     private seqB_: string;
     private seqC_: string;
