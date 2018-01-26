@@ -1,16 +1,26 @@
 class MatrixNode {
     private value_: number;
+    private previousCells_: [number, number, number][];
 
     constructor() {
         this.value_ = NaN;
+        this.previousCells_ = new Array();
     }
 
-    getValue() {
+    public getValue() {
         return this.value_;
     }
 
-    setValue(value: number) {
+    public setValue(value: number) {
         this.value_ = value;
+    }
+
+    public addPreviousCell(cell:[number, number, number]) {
+        this.previousCells_.push(cell);
+    }
+
+    public getPreviousCells() {
+        return this.previousCells_;
     }
 }
 
@@ -52,6 +62,7 @@ class SequenceAligner {
 
         // Initialize the current cell pointer
         this.currentIdx = [0, 0, 0];
+        this.incrementCell();
     }
 
     /**
@@ -153,13 +164,21 @@ class SequenceAligner {
         }
     }
 
+    private addMatrixPreviousCell(a, b, c, cell) {
+        this.fMatrix_[a][b][c].addPreviousCell(cell);
+    }
+
+    public getMatrixPreviousCells(a, b, c) {
+        return this.fMatrix_[a][b][c].getPreviousCells();
+    }
+
     public calcCurrentCell() {
         const a = this.currentIdx[0];
         const b = this.currentIdx[1];
         const c = this.currentIdx[2];
 
         let vals = new Array();
-        // Normal steps
+        // Calculate values from the reachable cells
         if (a > 0 && b > 0 && c > 0) {
             let v = this.getMatrixValue(a - 1, b - 1, c - 1) + this.getPenaltyTrio(this.seqA_[a - 1], this.seqB_[b - 1], this.seqC_[c - 1]);
             vals.push([v, [a - 1, b - 1, c - 1]]);
@@ -189,6 +208,7 @@ class SequenceAligner {
             vals.push([v, [a, b, c - 1]]);
         }
 
+        // Sort the values in descending order
         vals.sort(function (a, b) {
             if (a[0] === b[0])
                 return 0;
@@ -196,21 +216,54 @@ class SequenceAligner {
                 return (a[0] > b[0]) ? -1 : 1;
         });
 
+        // Store all the cells with the max value as previous cells
+        for (const v in vals) {
+            if (vals[v][0] === vals[0][0])
+                this.addMatrixPreviousCell(a, b, c, vals[v][1]);
+        }
+
+        // Set value of the current cell
         this.setMatrixValue(a, b, c, vals[0][0]);
     }
 
+    public getSolutions() {
+        const startCell:[number, number, number] = [this.seqA_.length, this.seqB_.length, this.seqC_.length];
+        return this.traverseSolutions(startCell, ["", "", ""], [startCell]);
+    }
+
+    private traverseSolutions(cell:[number, number, number], seqs:string[], cells:[number, number, number][]) {
+        const reachableCells = this.getMatrixPreviousCells(cell[0], cell[1], cell[2]);
+
+        if(reachableCells.length == 0) {
+            // This is the final cell
+            return [seqs, cells];
+        }
+
+        let results = new Array();
+        for(let c = 0; c < reachableCells.length; ++c) {
+            const sA = ((reachableCells[c][0] - cell[0]) == 0) ? "-" : this.seqA_[reachableCells[c][0]];
+            const sB = ((reachableCells[c][1] - cell[1]) == 0) ? "-" : this.seqB_[reachableCells[c][1]];
+            const sC = ((reachableCells[c][2] - cell[2]) == 0) ? "-" : this.seqC_[reachableCells[c][2]];
+            const seqsResult = [sA + seqs[0], sB + seqs[1], sC + seqs[2]];
+            let cellsResult = [reachableCells[c]].concat(cells);
+            const partialResults = this.traverseSolutions(reachableCells[c], seqsResult, cellsResult);
+
+            results = results.concat(partialResults);
+        }
+
+        return results;
+    }
+
     public doOneStep() {
-        this.incrementCell();
         this.calcCurrentCell();
+        this.incrementCell();
     }
 
     public doAllSteps() {
-        while(true) {
-            this.incrementCell();
-            this.calcCurrentCell();
+        while (true) {
+            this.doOneStep();
         }
     }
-
 
     // tylko do testów TODO: remove me
     drawLayerAsTable(div: HTMLElement, c: number) {
@@ -262,14 +315,14 @@ class SequenceAligner {
     }
 }
 
-// Test
 /*
+// Test
 function nextStep() {
     try {
         aligner.doOneStep();
         aligner.drawMatrix(document.getElementById("matrixF"));
     }
-    catch(e) {
+    catch (e) {
     }
 }
 
@@ -277,17 +330,60 @@ function allSteps() {
     try {
         aligner.doAllSteps();
     }
-    catch(e) {
+    catch (e) {
         aligner.drawMatrix(document.getElementById("matrixF"));
+
+        document.getElementById("log").appendChild(document.createTextNode("Results:\n\n"));
+
+        const results = aligner.getSolutions();
+        for(let r = 0; r < results.length; r+=2) {
+            document.getElementById("log").appendChild(document.createTextNode("Solution " + (r/2+1).toString() + ":\n"));
+            document.getElementById("log").appendChild(document.createTextNode("Seq1: " + results[r][0] + "\n"));
+            document.getElementById("log").appendChild(document.createTextNode("Seq2: " + results[r][1] + "\n"));
+            document.getElementById("log").appendChild(document.createTextNode("Seq3: " + results[r][2] + "\n"));
+            document.getElementById("log").appendChild(document.createTextNode("Cells: (" + results[r+1].join("),(") + ")\n\n"));
+        }
     }
 }
 
-let aligner = new SequenceAligner("AA", "AAC", "CAA");
-aligner.setPenaltyPair("A", "A", 2);
-aligner.setPenaltyPair("A", "C", -1);
-aligner.setPenaltyPair("C", "C", 2);
-aligner.setPenaltyPair("A", "-", -2);
-aligner.setPenaltyPair("C", "-", -2);
-aligner.setPenaltyPair("-", "-", 0);
-*/
+const seq1 = "TATACC";
+const seq2 = "TA";
+const seq3 = "TACC";
 
+// const seq1 = "AGTTAT";
+// const seq2 = "GTCGTT";
+// const seq3 = "ATTCGTAT";
+
+let aligner = new SequenceAligner(seq1, seq2, seq3);
+aligner.setPenaltyPair("A", "A", 10);
+aligner.setPenaltyPair("A", "G", -1);
+aligner.setPenaltyPair("A", "C", -3);
+aligner.setPenaltyPair("A", "T", -4);
+aligner.setPenaltyPair("A", "-", -5);
+aligner.setPenaltyPair("G", "A", -1);
+aligner.setPenaltyPair("G", "G",  7);
+aligner.setPenaltyPair("G", "C", -5);
+aligner.setPenaltyPair("G", "T", -3);
+aligner.setPenaltyPair("G", "-", -5);
+aligner.setPenaltyPair("C", "A", -3);
+aligner.setPenaltyPair("C", "G", -5);
+aligner.setPenaltyPair("C", "C",  9);
+aligner.setPenaltyPair("C", "T",  0);
+aligner.setPenaltyPair("C", "-", -5);
+aligner.setPenaltyPair("T", "A", -4);
+aligner.setPenaltyPair("T", "G", -3);
+aligner.setPenaltyPair("T", "C",  0);
+aligner.setPenaltyPair("T", "T",  8);
+aligner.setPenaltyPair("T", "-", -5);
+aligner.setPenaltyPair("-", "A", -5);
+aligner.setPenaltyPair("-", "G", -5);
+aligner.setPenaltyPair("-", "C", -5);
+aligner.setPenaltyPair("-", "T", -5);
+aligner.setPenaltyPair("-", "-",  0);
+
+function onLoad() {
+    document.getElementById("s1").innerText = "Seq1: " + seq1;
+    document.getElementById("s2").innerText = "Seq2: " + seq2;
+    document.getElementById("s3").innerText = "Seq3: " + seq3;
+}
+*/
