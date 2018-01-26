@@ -5,78 +5,100 @@
         <div class="ui-g">
           <div class="ui-g-6">
             <span class="ui-float-label" style="margin-top: 15px; margin-bottom: 40px">
-              <input id="float-input" type="text" size="50" pInputText>
+              <input id="float-input" #input1 (input)="input1.value=$event.target.value.toUpperCase()"
+                     [(ngModel)]="sequence1" OnlyAGCT="true" type="text" size="50" pInputText>
               <label for="float-input">Sekwencja 1</label>
             </span>
             <span class="ui-float-label" style="margin-bottom: 40px">
-              <input id="float-input2" type="text" size="50" pInputText>
+              <input id="float-input2" #input2 (input)="input2.value=$event.target.value.toUpperCase()"
+                     [(ngModel)]="sequence2" OnlyAGCT="true" type="text" size="50" pInputText>
               <label for="float-input2">Sekwencja 2</label>
             </span>
             <span class="ui-float-label" style="margin-bottom: 40px">
-              <input id="float-input3" type="text" size="50" pInputText>
+              <input id="float-input3" #input3 (input)="input3.value=$event.target.value.toUpperCase()"
+                     [(ngModel)]="sequence3" OnlyAGCT="true" type="text" size="50" pInputText>
               <label for="float-input3">Sekwencja 3</label>
             </span>
           </div>
           <div class="ui-g-6">
             <div class="ui-g-6">
-              <p-table [value]="cells">
+              <p-table [value]="probabilityRows">
                 <ng-template pTemplate="header">
                   <tr>
                     <th></th>
-                    <th>A</th>
-                    <th>G</th>
-                    <th>C</th>
-                    <th>T</th>
+                    <th>{{A_NUCL_STR}}</th>
+                    <th>{{G_NUCL_STR}}</th>
+                    <th>{{C_NUCL_STR}}</th>
+                    <th>{{T_NUCL_STR}}</th>
+                    <th>{{BREAK_NUCL_STR}}</th>
                   </tr>
                 </ng-template>
-                <ng-template pTemplate="body" let-cell>
+                <ng-template pTemplate="body" let-row>
                   <tr style="text-align: center">
-                    <td class="primeng-panel-color">{{cell.label}}</td>
+                    <td class="primeng-panel-color">{{row.label}}</td>
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input type="text" [(ngModel)]="cell.valueA">
+                          <input OnlyNumber="true" type="text" (input)="setVariable($event,row.label,A_NUCL_STR)" [(ngModel)]="row.nuclMap[A_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
-                          {{cell.valueA}}
+                          {{row.nuclMap[A_NUCL_STR]}}
                         </ng-template>
                       </p-cellEditor>
                     </td>
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input type="text" [(ngModel)]="cell.valueG">
+                          <input OnlyNumber="true" type="text" (input)="setVariable($event,row.label,G_NUCL_STR)" [(ngModel)]="row.nuclMap[G_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
-                          {{cell.valueG}}
+                          {{row.nuclMap[G_NUCL_STR]}}
                         </ng-template>
                       </p-cellEditor>
                     </td>
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input type="text" [(ngModel)]="cell.valueC">
+                          <input OnlyNumber="true" type="text" (input)="setVariable($event,row.label,C_NUCL_STR)" [(ngModel)]="row.nuclMap[C_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
-                          {{cell.valueC}}
+                          {{row.nuclMap[C_NUCL_STR]}}
                         </ng-template>
                       </p-cellEditor>
                     </td>
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input type="text" [(ngModel)]="cell.valueT">
+                          <input OnlyNumber="true" type="text" (input)="setVariable($event,row.label,T_NUCL_STR)" [(ngModel)]="row.nuclMap[T_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
-                          {{cell.valueT}}
+                          {{row.nuclMap[T_NUCL_STR]}}
+                        </ng-template>
+                      </p-cellEditor>
+                    </td>
+                    <td pEditableColumn>
+                      <p-cellEditor>
+                        <ng-template pTemplate="input">
+                          <input OnlyNumber="true" type="text" (input)="setVariable($event,row.label,BREAK_NUCL_STR)" [(ngModel)]="row.nuclMap[BREAK_NUCL_STR]">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                          {{row.nuclMap[BREAK_NUCL_STR]}}
                         </ng-template>
                       </p-cellEditor>
                     </td>
                   </tr>
                 </ng-template>
               </p-table>
+              <div style="text-align: center; margin-top: 10px; color: #898989;">
+                <span >MACIERZ PRAWDOPODOBIEŃSTW</span>
+              </div>
             </div>
           </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px">
+          <button style="width: 20%" pButton type="button" (click)="runAlgorithm()" icon="fa-play" label="Uruchom algorytm"></button>
+          <button style="width: 20%" pButton type="button" (click)="runStepAlgorithm()" icon="fa-forward" label="Uruchom algorytm krokowo"></button>
+          <button style="width: 20%" pButton type="button" (click)="nextStep()" icon="fa-step-forward" [disabled]="!showNextStepBtn" label="Następny krok"></button>
         </div>
       </p-panel>
     </div>
@@ -108,10 +130,7 @@
               </tr>
               <tr>
                 <span class="result-table-label">A</span>
-                <td>-10
-                  <i class="fa fa-arrow-right arrow-table" aria-hidden="true"></i>
-                  <i class="fa fa-arrow-down arrow-table" style="display: flex; text-align: center" aria-hidden="true"></i>
-                </td>
+                <td>-10</td>
                 <td></td>
                 <td></td>
                 <td></td>
