@@ -7,6 +7,8 @@ import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AgmCoreModule } from '@agm/core';
 import { ChartsModule } from 'ng2-charts';
+import { OnlyNumber } from 'utils/onlyNumber.directive'
+import { OnlyAGCT } from 'utils/onlyAGCT.directive'
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -45,13 +47,16 @@ import {ReactiveFormsModule} from '@angular/forms';
 
 import {PanelModule} from 'primeng/panel';
 import {InputTextModule} from 'primeng/inputtext';
-
+import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OnlyNumber,
+    OnlyAGCT
   ],
   imports: [
     BrowserModule,
@@ -97,9 +102,11 @@ import { AppComponent } from './app.component';
     ChartsModule,
     PanelModule,
     InputTextModule,
-    TableModule
+    TableModule,
+    ButtonModule
   ],
   providers: [
+
   ],
 
   bootstrap: [AppComponent]

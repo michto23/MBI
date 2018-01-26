@@ -1,14 +1,11 @@
 import {Component, Pipe, PipeTransform} from '@angular/core';
-import { Cell } from '../model/cell';
+import { ProbabilityRow } from '../model/rowProbability';
 import {FormControl} from "@angular/forms";
 import {Observable} from "rxjs/Observable";
 import {map, startWith} from "rxjs/operators";
+import {Constants} from "utils/constants"
 import {MatAutocompleteSelectedEvent, MatDatepickerInputEvent} from "@angular/material";
 
-const FIRST_STOP_ID = 33;
-const LAST_STOP_ID = 6;
-const START_ICON = 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-9/32/Start-icon.png';
-const FINISH_ICON = 'http://icons.iconarchive.com/icons/icons8/ios7/32/Sports-Finish-Flag-icon.png';
 
 @Component({
   selector: 'app-root',
@@ -17,28 +14,55 @@ const FINISH_ICON = 'http://icons.iconarchive.com/icons/icons8/ios7/32/Sports-Fi
 })
 export class AppComponent {
 
-  showPredictions: boolean;
-  cells: Array<Cell>;
+  A_NUCL_STR = Constants.A_NUCL;
+  G_NUCL_STR = Constants.G_NUCL;
+  C_NUCL_STR = Constants.C_NUCL;
+  T_NUCL_STR = Constants.T_NUCL;
+  BREAK_NUCL_STR = Constants.BREAK_NUCL;
+
+  sequence1: string;
+  sequence2: string;
+  sequence3: string;
+  probabilityRows: Array<ProbabilityRow>;
+
+  showNextStepBtn = false;
+
 
   constructor () {
-    this.cells = [
-      new Cell("A",1,2,3,4),
-      new Cell("G",1,2,3,4),
-      new Cell("C",1,2,3,4),
-      new Cell("T",1,2,3,4),
-    ]
+    this.probabilityRows = [
+      new ProbabilityRow(this.A_NUCL_STR,1,1,1,1,1),
+      new ProbabilityRow(this.G_NUCL_STR,1,1,1,1,1),
+      new ProbabilityRow(this.C_NUCL_STR,1,1,1,1,1),
+      new ProbabilityRow(this.T_NUCL_STR,1,1,1,1,1),
+      new ProbabilityRow(this.BREAK_NUCL_STR,1,1,1,1,1),
+    ];
+    this.sequence1 = "AGCT";
+    this.sequence2 = "AAAT";
+    this.sequence3 = "CGAT";
   }
 
-  // startStopAutocomplete: FormControl = new FormControl();
-  // endStopAutocomplete: FormControl = new FormControl();
+  setVariable(event, rowNucl, colNucl) {
+    let foundRow = this.probabilityRows.filter(row =>
+      row.label === colNucl);
 
-  isWeekend(date) {
-    return (date.getDay() === 6) || (date.getDay() === 0);
-  };
+    if (foundRow != null && foundRow.length > 0)
+      foundRow[0].nuclMap[rowNucl] = event.target.value;
+  }
 
-  toNumber(str : string) : number {
-    console.log(Number(str));
-    return Number(str);
+  runAlgorithm () {
+    this.showNextStepBtn = false;
+    console.log(this.probabilityRows);
+    console.log(this.sequence1);
+    console.log(this.sequence2);
+    console.log(this.sequence3);
+  }
+
+  runStepAlgorithm () {
+    this.showNextStepBtn = true;
+  }
+
+  nextStep () {
+
   }
 
 }

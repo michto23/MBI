@@ -1,3 +1,5 @@
+import {Constants} from "utils/constants"
+
 class MatrixNode {
     private value_: number;
 
@@ -37,11 +39,11 @@ class SequenceAligner {
 
         // Initialize the nucleotide id map
         this.nuclIdMap_ = {};
-        this.nuclIdMap_["A"] = 0;
-        this.nuclIdMap_["G"] = 1;
-        this.nuclIdMap_["C"] = 2;
-        this.nuclIdMap_["T"] = 3;
-        this.nuclIdMap_["-"] = 4;
+        this.nuclIdMap_[Constants.A_NUCL] = 0;
+        this.nuclIdMap_[Constants.G_NUCL] = 1;
+        this.nuclIdMap_[Constants.C_NUCL] = 2;
+        this.nuclIdMap_[Constants.T_NUCL] = 3;
+        this.nuclIdMap_[Constants.BREAK_NUCL] = 4;
 
         // Initialize the penalty matrix
         this.penaltyMatrix_ = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]];
