@@ -21,6 +21,7 @@ class SequenceAligner {
     fMatrix_: MatrixNode[][][];
     penaltyMatrix_: number[][];
     nuclIdMap_: { [key: string]: number; };
+    currentIdx: [number, number, number];
 
     /**
      * The constructor
@@ -46,7 +47,11 @@ class SequenceAligner {
         this.penaltyMatrix_ = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]];
 
         // Initialize the F matrix
-        this.initFMatrix(this.seqA_.length, this.seqB_.length, this.seqC_.length);
+        this.initFMatrix(this.seqA_.length + 1, this.seqB_.length + 1, this.seqC_.length + 1);
+        this.setMatrixValue(0, 0, 0, 0);
+
+        // Initialize the current cell pointer
+        this.currentIdx = [0, 0, 0];
     }
 
     /**
@@ -98,13 +103,8 @@ class SequenceAligner {
      * @param {number} value The value of the penalty.
      */
     public setPenaltyPair(nucl1: string, nucl2: string, value: number) {
-        console.log(nucl1);
-        console.log(this.nuclIdMap_[nucl1]);
-        console.log(nucl2);
-        console.log(this.nuclIdMap_[nucl2]);
-
         this.penaltyMatrix_[this.nuclIdMap_[nucl1]][this.nuclIdMap_[nucl2]] = value;
-        if(nucl1 != nucl2)
+        if (nucl1 != nucl2)
             this.penaltyMatrix_[this.nuclIdMap_[nucl2]][this.nuclIdMap_[nucl1]] = value;
     }
 
@@ -126,13 +126,96 @@ class SequenceAligner {
      * @returns {number} The value of the penalty.
      */
     private getPenaltyTrio(nucl1: string, nucl2: string, nucl3: string) {
+        if (nucl1 === undefined)
+            nucl1 = "-";
+        if (nucl2 === undefined)
+            nucl2 = "-";
+        if (nucl3 === undefined)
+            nucl3 = "-";
         return this.getPenaltyPair(nucl1, nucl2) + this.getPenaltyPair(nucl1, nucl3) + this.getPenaltyPair(nucl2, nucl3);
     }
+
+    public incrementCell() {
+        if (this.currentIdx[0] + 1 <= this.seqA_.length) {
+            ++this.currentIdx[0];
+        }
+        else if (this.currentIdx[1] + 1 <= this.seqB_.length) {
+            this.currentIdx[0] = 0;
+            ++this.currentIdx[1];
+        }
+        else if (this.currentIdx[2] + 1 <= this.seqC_.length) {
+            this.currentIdx[0] = 0;
+            this.currentIdx[1] = 0;
+            ++this.currentIdx[2];
+        }
+        else {
+            throw "finish";
+        }
+    }
+
+    public calcCurrentCell() {
+        const a = this.currentIdx[0];
+        const b = this.currentIdx[1];
+        const c = this.currentIdx[2];
+
+        let vals = new Array();
+        // Normal steps
+        if (a > 0 && b > 0 && c > 0) {
+            let v = this.getMatrixValue(a - 1, b - 1, c - 1) + this.getPenaltyTrio(this.seqA_[a - 1], this.seqB_[b - 1], this.seqC_[c - 1]);
+            vals.push([v, [a - 1, b - 1, c - 1]]);
+        }
+        if (a > 0 && b > 0) {
+            let v = this.getMatrixValue(a - 1, b - 1, c) + this.getPenaltyTrio(this.seqA_[a - 1], this.seqB_[b - 1], "-");
+            vals.push([v, [a - 1, b - 1, c],]);
+        }
+        if (a > 0 && c > 0) {
+            let v = this.getMatrixValue(a - 1, b, c - 1) + this.getPenaltyTrio(this.seqA_[a - 1], "-", this.seqC_[c - 1]);
+            vals.push([v, [a - 1, b, c - 1]]);
+        }
+        if (a > 0) {
+            let v = this.getMatrixValue(a - 1, b, c) + this.getPenaltyTrio(this.seqA_[a - 1], "-", "-");
+            vals.push([v, [a - 1, b, c]]);
+        }
+        if (b > 0 && c > 0) {
+            let v = this.getMatrixValue(a, b - 1, c - 1) + this.getPenaltyTrio("-", this.seqB_[b - 1], this.seqC_[c - 1]);
+            vals.push([v, [a, b - 1, c - 1]]);
+        }
+        if (b > 0) {
+            let v = this.getMatrixValue(a, b - 1, c) + this.getPenaltyTrio("-", this.seqB_[b - 1], "-");
+            vals.push([v, [a, b - 1, c]]);
+        }
+        if (c > 0) {
+            let v = this.getMatrixValue(a, b, c - 1) + this.getPenaltyTrio("-", "-", this.seqC_[c - 1]);
+            vals.push([v, [a, b, c - 1]]);
+        }
+
+        vals.sort(function (a, b) {
+            if (a[0] === b[0])
+                return 0;
+            else
+                return (a[0] > b[0]) ? -1 : 1;
+        });
+
+        this.setMatrixValue(a, b, c, vals[0][0]);
+    }
+
+    public doOneStep() {
+        this.incrementCell();
+        this.calcCurrentCell();
+    }
+
+    public doAllSteps() {
+        while(true) {
+            this.incrementCell();
+            this.calcCurrentCell();
+        }
+    }
+
 
     // tylko do testów TODO: remove me
     drawLayerAsTable(div: HTMLElement, c: number) {
         let table = document.createElement("table");
-        table.setAttribute("border", "1")
+        table.setAttribute("border", "1");
 
         let bIndexRow = table.insertRow(0);
         let cIndexCell = bIndexRow.insertCell(0);
@@ -140,14 +223,14 @@ class SequenceAligner {
         cIndexCell.style.backgroundColor = "#fdad9e";
         let bIndexRowDrawn = false;
 
-        for (let a = 0; a < this.seqA_.length; ++a) {
+        for (let a = 0; a <= this.seqA_.length; ++a) {
             let row = table.insertRow(a + 1);
 
             let aIndexCell = row.insertCell(0);
             aIndexCell.innerText = "a = " + a.toString();
             aIndexCell.style.backgroundColor = "#d4ffcf";
 
-            for (let b = 0; b < this.seqB_.length; ++b) {
+            for (let b = 0; b <= this.seqB_.length; ++b) {
                 if (!bIndexRowDrawn) {
                     let bIndexCell = bIndexRow.insertCell(b + 1);
                     bIndexCell.innerText = "b = " + b.toString();
@@ -169,16 +252,41 @@ class SequenceAligner {
 
     // tylko do testów TODO: remove me
     drawMatrix(div: HTMLElement) {
-        for (let c = this.seqC_.length - 1; c >= 0; --c) {
+        while (div.firstChild) {
+            div.removeChild(div.firstChild);
+        }
+        for (let c = this.seqC_.length; c >= 0; --c) {
             this.drawLayerAsTable(div, c);
             div.appendChild(document.createElement("br"));
         }
     }
 }
 
-
 // Test
-let aligner = new SequenceAligner("GAAT", "AAT", "GAA");
-aligner.setPenaltyPair("A", "C", 10);
-aligner.setMatrixValue(0, 0, 0, 123);
-aligner.drawMatrix(document.getElementById("matrixF"));
+/*
+function nextStep() {
+    try {
+        aligner.doOneStep();
+        aligner.drawMatrix(document.getElementById("matrixF"));
+    }
+    catch(e) {
+    }
+}
+
+function allSteps() {
+    try {
+        aligner.doAllSteps();
+    }
+    catch(e) {
+        aligner.drawMatrix(document.getElementById("matrixF"));
+    }
+}
+
+let aligner = new SequenceAligner("AA", "AAC", "CAA");
+aligner.setPenaltyPair("A", "A", 2);
+aligner.setPenaltyPair("A", "C", -1);
+aligner.setPenaltyPair("C", "C", 2);
+aligner.setPenaltyPair("A", "-", -2);
+aligner.setPenaltyPair("C", "-", -2);
+aligner.setPenaltyPair("-", "-", 0);
+*/
