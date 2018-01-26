@@ -15,7 +15,7 @@ class MatrixNode {
         this.value_ = value;
     }
 
-    public addPreviousCell(cell:[number, number, number]) {
+    public addPreviousCell(cell: [number, number, number]) {
         this.previousCells_.push(cell);
     }
 
@@ -227,20 +227,20 @@ class SequenceAligner {
     }
 
     public getSolutions() {
-        const startCell:[number, number, number] = [this.seqA_.length, this.seqB_.length, this.seqC_.length];
+        const startCell: [number, number, number] = [this.seqA_.length, this.seqB_.length, this.seqC_.length];
         return this.traverseSolutions(startCell, ["", "", ""], [startCell]);
     }
 
-    private traverseSolutions(cell:[number, number, number], seqs:string[], cells:[number, number, number][]) {
+    private traverseSolutions(cell: [number, number, number], seqs: string[], cells: [number, number, number][]) {
         const reachableCells = this.getMatrixPreviousCells(cell[0], cell[1], cell[2]);
 
-        if(reachableCells.length == 0) {
+        if (reachableCells.length == 0) {
             // This is the final cell
             return [seqs, cells];
         }
 
         let results = new Array();
-        for(let c = 0; c < reachableCells.length; ++c) {
+        for (let c = 0; c < reachableCells.length; ++c) {
             const sA = ((reachableCells[c][0] - cell[0]) == 0) ? "-" : this.seqA_[reachableCells[c][0]];
             const sB = ((reachableCells[c][1] - cell[1]) == 0) ? "-" : this.seqB_[reachableCells[c][1]];
             const sC = ((reachableCells[c][2] - cell[2]) == 0) ? "-" : this.seqC_[reachableCells[c][2]];
@@ -317,12 +317,45 @@ class SequenceAligner {
 
 /*
 // Test
+function clearLog() {
+    let log = document.getElementById("log");
+    while (log.firstChild) {
+        log.removeChild(log.firstChild);
+    }
+}
+
+function showSolutions() {
+    aligner.drawMatrix(document.getElementById("matrixF"));
+
+    clearLog();
+
+    let log = document.getElementById("log");
+    log.appendChild(document.createTextNode("Results:\n\n"));
+
+    const results = aligner.getSolutions();
+    for (let r = 0; r < results.length; r += 2) {
+        log.appendChild(document.createTextNode("Solution " + (r / 2 + 1).toString() + ":\n"));
+        log.appendChild(document.createTextNode("Seq1: " + results[r][0] + "\n"));
+        log.appendChild(document.createTextNode("Seq2: " + results[r][1] + "\n"));
+        log.appendChild(document.createTextNode("Seq3: " + results[r][2] + "\n"));
+        log.appendChild(document.createTextNode("Cells: (" + results[r + 1].join("),(") + ")\n\n"));
+    }
+}
+
+function showStepInfo() {
+    let log = document.getElementById("log");
+    log.appendChild(document.createTextNode("Step info...\n"));
+
+}
+
 function nextStep() {
     try {
         aligner.doOneStep();
         aligner.drawMatrix(document.getElementById("matrixF"));
+        showStepInfo();
     }
     catch (e) {
+        showSolutions();
     }
 }
 
@@ -331,18 +364,7 @@ function allSteps() {
         aligner.doAllSteps();
     }
     catch (e) {
-        aligner.drawMatrix(document.getElementById("matrixF"));
-
-        document.getElementById("log").appendChild(document.createTextNode("Results:\n\n"));
-
-        const results = aligner.getSolutions();
-        for(let r = 0; r < results.length; r+=2) {
-            document.getElementById("log").appendChild(document.createTextNode("Solution " + (r/2+1).toString() + ":\n"));
-            document.getElementById("log").appendChild(document.createTextNode("Seq1: " + results[r][0] + "\n"));
-            document.getElementById("log").appendChild(document.createTextNode("Seq2: " + results[r][1] + "\n"));
-            document.getElementById("log").appendChild(document.createTextNode("Seq3: " + results[r][2] + "\n"));
-            document.getElementById("log").appendChild(document.createTextNode("Cells: (" + results[r+1].join("),(") + ")\n\n"));
-        }
+        showSolutions();
     }
 }
 
@@ -361,25 +383,25 @@ aligner.setPenaltyPair("A", "C", -3);
 aligner.setPenaltyPair("A", "T", -4);
 aligner.setPenaltyPair("A", "-", -5);
 aligner.setPenaltyPair("G", "A", -1);
-aligner.setPenaltyPair("G", "G",  7);
+aligner.setPenaltyPair("G", "G", 7);
 aligner.setPenaltyPair("G", "C", -5);
 aligner.setPenaltyPair("G", "T", -3);
 aligner.setPenaltyPair("G", "-", -5);
 aligner.setPenaltyPair("C", "A", -3);
 aligner.setPenaltyPair("C", "G", -5);
-aligner.setPenaltyPair("C", "C",  9);
-aligner.setPenaltyPair("C", "T",  0);
+aligner.setPenaltyPair("C", "C", 9);
+aligner.setPenaltyPair("C", "T", 0);
 aligner.setPenaltyPair("C", "-", -5);
 aligner.setPenaltyPair("T", "A", -4);
 aligner.setPenaltyPair("T", "G", -3);
-aligner.setPenaltyPair("T", "C",  0);
-aligner.setPenaltyPair("T", "T",  8);
+aligner.setPenaltyPair("T", "C", 0);
+aligner.setPenaltyPair("T", "T", 8);
 aligner.setPenaltyPair("T", "-", -5);
 aligner.setPenaltyPair("-", "A", -5);
 aligner.setPenaltyPair("-", "G", -5);
 aligner.setPenaltyPair("-", "C", -5);
 aligner.setPenaltyPair("-", "T", -5);
-aligner.setPenaltyPair("-", "-",  0);
+aligner.setPenaltyPair("-", "-", 0);
 
 function onLoad() {
     document.getElementById("s1").innerText = "Seq1: " + seq1;
