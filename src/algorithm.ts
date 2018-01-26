@@ -1,3 +1,6 @@
+/**
+ * Represents a single cell in the matrix used to compute sequences alignment.
+ */
 class MatrixNode {
     private value_: number;
     private previousCells_: [number, number, number][];
@@ -24,14 +27,18 @@ class MatrixNode {
     }
 }
 
+/**
+ * Represents the sequence alignment controller.
+ */
 class SequenceAligner {
-    seqA_: string;
-    seqB_: string;
-    seqC_: string;
-    fMatrix_: MatrixNode[][][];
-    penaltyMatrix_: number[][];
-    nuclIdMap_: { [key: string]: number; };
-    currentIdx: [number, number, number];
+    private seqA_: string;
+    private seqB_: string;
+    private seqC_: string;
+    private fMatrix_: MatrixNode[][][];
+    private penaltyMatrix_: number[][];
+    private nuclIdMap_: { [key: string]: number; };
+    private currentIdx: [number, number, number];
+    private lastStepInfo_: string;
 
     /**
      * The constructor
@@ -59,10 +66,11 @@ class SequenceAligner {
         // Initialize the F matrix
         this.initFMatrix(this.seqA_.length + 1, this.seqB_.length + 1, this.seqC_.length + 1);
         this.setMatrixValue(0, 0, 0, 0);
+        this.lastStepInfo_ = "Komórka (0,0,0) została zainicjalizowana wartością 0.\n";
 
         // Initialize the current cell pointer
         this.currentIdx = [0, 0, 0];
-        this.incrementCell();
+        this.moveToNextCell();
     }
 
     /**
@@ -103,7 +111,7 @@ class SequenceAligner {
      * @param {number} c The 3rd coordinate, corresponding to the sequence C.
      * @param {number} value The desired value.
      */
-    public setMatrixValue(a: number, b: number, c: number, value: number) {
+    private setMatrixValue(a: number, b: number, c: number, value: number) {
         this.fMatrix_[a][b][c].setValue(value);
     }
 
@@ -125,7 +133,7 @@ class SequenceAligner {
      * @param {string} nucl2 The second nucleotide ("A"/"G"/"C"/"T"/"-").
      * @returns {number} The value of the penalty.
      */
-    public getPenaltyPair(nucl1: string, nucl2: string) {
+    private getPenaltyPair(nucl1: string, nucl2: string) {
         return this.penaltyMatrix_[this.nuclIdMap_[nucl1]][this.nuclIdMap_[nucl2]];
     }
 
@@ -137,16 +145,10 @@ class SequenceAligner {
      * @returns {number} The value of the penalty.
      */
     private getPenaltyTrio(nucl1: string, nucl2: string, nucl3: string) {
-        if (nucl1 === undefined)
-            nucl1 = "-";
-        if (nucl2 === undefined)
-            nucl2 = "-";
-        if (nucl3 === undefined)
-            nucl3 = "-";
         return this.getPenaltyPair(nucl1, nucl2) + this.getPenaltyPair(nucl1, nucl3) + this.getPenaltyPair(nucl2, nucl3);
     }
 
-    public incrementCell() {
+    private moveToNextCell() {
         if (this.currentIdx[0] + 1 <= this.seqA_.length) {
             ++this.currentIdx[0];
         }
@@ -168,44 +170,50 @@ class SequenceAligner {
         this.fMatrix_[a][b][c].addPreviousCell(cell);
     }
 
-    public getMatrixPreviousCells(a, b, c) {
+    private getMatrixPreviousCells(a, b, c) {
         return this.fMatrix_[a][b][c].getPreviousCells();
     }
 
-    public calcCurrentCell() {
+    private calcReachableValue(a: number, b: number, c: number, p1: string, p2: string, p3: string) {
+        const v = this.getMatrixValue(a, b, c);
+        const p = this.getPenaltyTrio(p1, p2, p3);
+        let ps = p.toString()
+        if(ps[0] === "-")
+            ps = "(" + ps + ")";
+        const n = v + p;
+        this.lastStepInfo_ += "F(" + a + "," + b + "," + c + ") + e(" + p1 + "," + p2 + "," + p3 + ") = " + v + " + " + ps + " = " + n + "\n";
+        return [n, [a, b, c]];
+    }
+
+    private calcCurrentCell() {
         const a = this.currentIdx[0];
         const b = this.currentIdx[1];
         const c = this.currentIdx[2];
 
-        let vals = new Array();
+        this.lastStepInfo_ = "";
+
         // Calculate values from the reachable cells
+        let vals = new Array();
         if (a > 0 && b > 0 && c > 0) {
-            let v = this.getMatrixValue(a - 1, b - 1, c - 1) + this.getPenaltyTrio(this.seqA_[a - 1], this.seqB_[b - 1], this.seqC_[c - 1]);
-            vals.push([v, [a - 1, b - 1, c - 1]]);
+            vals.push(this.calcReachableValue(a - 1, b - 1, c - 1, this.seqA_[a - 1], this.seqB_[b - 1], this.seqC_[c - 1]));
         }
         if (a > 0 && b > 0) {
-            let v = this.getMatrixValue(a - 1, b - 1, c) + this.getPenaltyTrio(this.seqA_[a - 1], this.seqB_[b - 1], "-");
-            vals.push([v, [a - 1, b - 1, c],]);
+            vals.push(this.calcReachableValue(a - 1, b - 1, c, this.seqA_[a - 1], this.seqB_[b - 1], "-"));
         }
         if (a > 0 && c > 0) {
-            let v = this.getMatrixValue(a - 1, b, c - 1) + this.getPenaltyTrio(this.seqA_[a - 1], "-", this.seqC_[c - 1]);
-            vals.push([v, [a - 1, b, c - 1]]);
+            vals.push(this.calcReachableValue(a - 1, b, c - 1, this.seqA_[a - 1], "-", this.seqC_[c - 1]));
         }
         if (a > 0) {
-            let v = this.getMatrixValue(a - 1, b, c) + this.getPenaltyTrio(this.seqA_[a - 1], "-", "-");
-            vals.push([v, [a - 1, b, c]]);
+            vals.push(this.calcReachableValue(a - 1, b, c, this.seqA_[a - 1], "-", "-"));
         }
         if (b > 0 && c > 0) {
-            let v = this.getMatrixValue(a, b - 1, c - 1) + this.getPenaltyTrio("-", this.seqB_[b - 1], this.seqC_[c - 1]);
-            vals.push([v, [a, b - 1, c - 1]]);
+            vals.push(this.calcReachableValue(a, b - 1, c - 1, "-", this.seqB_[b - 1], this.seqC_[c - 1]));
         }
         if (b > 0) {
-            let v = this.getMatrixValue(a, b - 1, c) + this.getPenaltyTrio("-", this.seqB_[b - 1], "-");
-            vals.push([v, [a, b - 1, c]]);
+            vals.push(this.calcReachableValue(a, b - 1, c, "-", this.seqB_[b - 1], "-"));
         }
         if (c > 0) {
-            let v = this.getMatrixValue(a, b, c - 1) + this.getPenaltyTrio("-", "-", this.seqC_[c - 1]);
-            vals.push([v, [a, b, c - 1]]);
+            vals.push(this.calcReachableValue(a, b, c - 1, "-", "-", this.seqC_[c - 1]));
         }
 
         // Sort the values in descending order
@@ -224,6 +232,9 @@ class SequenceAligner {
 
         // Set value of the current cell
         this.setMatrixValue(a, b, c, vals[0][0]);
+
+        // Update the step info
+        this.lastStepInfo_ = "Wypełniono komórkę (" + a + "," + b + "," + c + ") wartością " + vals[0][0] + ", tj. maksymalną z osiągalnych:\n" + this.lastStepInfo_;
     }
 
     public getSolutions() {
@@ -256,13 +267,17 @@ class SequenceAligner {
 
     public doOneStep() {
         this.calcCurrentCell();
-        this.incrementCell();
+        this.moveToNextCell();
     }
 
     public doAllSteps() {
         while (true) {
             this.doOneStep();
         }
+    }
+
+    public getLastStepInfo() {
+        return this.lastStepInfo_;
     }
 
     // tylko do testów TODO: remove me
@@ -315,8 +330,8 @@ class SequenceAligner {
     }
 }
 
-/*
 // Test
+/*
 function clearLog() {
     let log = document.getElementById("log");
     while (log.firstChild) {
@@ -330,22 +345,21 @@ function showSolutions() {
     clearLog();
 
     let log = document.getElementById("log");
-    log.appendChild(document.createTextNode("Results:\n\n"));
 
     const results = aligner.getSolutions();
     for (let r = 0; r < results.length; r += 2) {
-        log.appendChild(document.createTextNode("Solution " + (r / 2 + 1).toString() + ":\n"));
-        log.appendChild(document.createTextNode("Seq1: " + results[r][0] + "\n"));
-        log.appendChild(document.createTextNode("Seq2: " + results[r][1] + "\n"));
-        log.appendChild(document.createTextNode("Seq3: " + results[r][2] + "\n"));
-        log.appendChild(document.createTextNode("Cells: (" + results[r + 1].join("),(") + ")\n\n"));
+        log.appendChild(document.createTextNode("Dopasowanie globalne nr " + (r / 2 + 1).toString() + ":\n"));
+        log.appendChild(document.createTextNode("Sekwencja 1: " + results[r][0] + "\n"));
+        log.appendChild(document.createTextNode("Sekwencja 2: " + results[r][1] + "\n"));
+        log.appendChild(document.createTextNode("Sekwencja 3: " + results[r][2] + "\n"));
+        log.appendChild(document.createTextNode("Ścieżka rozwiązania: (" + results[r + 1].join(")→(") + ")\n\n"));
     }
 }
 
 function showStepInfo() {
     let log = document.getElementById("log");
-    log.appendChild(document.createTextNode("Step info...\n"));
-
+    log.appendChild(document.createTextNode(aligner.getLastStepInfo() + "\n"));
+    log.scrollTop = log.scrollHeight;
 }
 
 function nextStep() {
@@ -404,8 +418,11 @@ aligner.setPenaltyPair("-", "T", -5);
 aligner.setPenaltyPair("-", "-", 0);
 
 function onLoad() {
-    document.getElementById("s1").innerText = "Seq1: " + seq1;
-    document.getElementById("s2").innerText = "Seq2: " + seq2;
-    document.getElementById("s3").innerText = "Seq3: " + seq3;
+    document.getElementById("s1").innerHTML = "Sekwencja 1: <b>" + seq1 + "</b>";
+    document.getElementById("s2").innerHTML = "Sekwencja 2: <b>" + seq2 + "</b>";
+    document.getElementById("s3").innerHTML = "Sekwencja 3: <b>" + seq3 + "</b>";
+
+    showStepInfo();
+    aligner.drawMatrix(document.getElementById("matrixF"));
 }
 */
