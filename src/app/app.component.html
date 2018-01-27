@@ -152,16 +152,26 @@
             </div>
           </div>
           <div class="ui-g-4">
+            <div *ngIf="resultPaths.length > 0">
+              <textarea [(ngModel)]="resultLog" rows="10" class="log-textarea"
+                        pInputTextarea disabled="true">
+              </textarea>
+              <div style="text-align: center; margin-top: 10px; color: #898989;">
+                <span >
+                  <div style="text-align: center; margin-top: 20px; margin-bottom: 20px; display: inline-flex">
+                    <button style="margin-top: -5px; margin-right: 20px;" pButton type="button" (click)="resultPathIndexToLeft()" icon="fa-chevron-left"></button>
+                      <div>Rezultat {{resultPathIndex + 1}}</div>
+                    <button style="margin-top: -5px; margin-left: 15px;" pButton type="button" (click)="resultPathIndexToRight()" icon="fa-chevron-right"></button>
+                  </div>
+                </span>
+              </div>
+              <br>
+            </div>
             <textarea [(ngModel)]="logs" rows="10" class="log-textarea"
                       pInputTextarea disabled="true">
             </textarea>
-            <br>
-            <div *ngIf="resultPaths.length > 0" style="text-align: center; margin-top: 20px; display: inline-flex">
-              <button style="margin-top: -5px; margin-right: 20px;" pButton type="button" (click)="resultPathIndexToLeft()" icon="fa-chevron-left"></button>
-              <div>
-                Rezultat {{resultPathIndex + 1}}
-              </div>
-              <button style="margin-top: -5px; margin-left: 15px;" pButton type="button" (click)="resultPathIndexToRight()" icon="fa-chevron-right"></button>
+            <div style="text-align: center; margin-top: 10px; color: #898989;">
+              <span >LOGI KROKÓW</span>
             </div>
           </div>
         </div>

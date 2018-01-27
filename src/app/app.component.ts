@@ -37,6 +37,7 @@ export class AppComponent {
 
   sequenceAligner : SequenceAligner;
   logs : string;
+  resultLog : string;
 
   constructor () {
     this.penaltyRows = [
@@ -72,7 +73,7 @@ export class AppComponent {
 
     setTimeout(()=>{
       this.sequenceAligner.doAllSteps();
-      this.fillAllMatrixes();
+      this.processAllCells(this.getMatrixValue);
       this.currentSequence3Index = 0;
       this.sequenceStrArray = AppComponent.prepareSequenceStrArray(this.sequence3);
 
@@ -92,7 +93,7 @@ export class AppComponent {
 
   }
 
-  fillAllMatrixes() {
+  processAllCells(callback: (i: number, j:number, k:number, scope) => any) : void {
     /*
     i = sequence3
     j = sequence1
@@ -101,11 +102,21 @@ export class AppComponent {
     for (let i = 0; i < this.allResultMatrixes.length; ++i) {
       for (let j = 0; j < (this.allResultMatrixes[i].length - 1); ++j) {
         for (let k = 0; k < (this.allResultMatrixes[i][j].length - 1); ++k) {
-          this.allResultMatrixes[i][j + 1][k + 1].value = this.sequenceAligner.getMatrixValue(j,k,i);
+          callback(i,j,k, this);
         }
       }
     }
   }
+
+  getMatrixValue(i: number, j:number, k:number, scope) : void {
+    scope.allResultMatrixes[i][j + 1][k + 1].value = scope.sequenceAligner.getMatrixValue(j,k,i);
+  }
+
+  resetSelected(i: number, j:number, k:number, scope) : void {
+    scope.allResultMatrixes[i][j + 1][k + 1].selected = false;
+  }
+
+
 
   currentSequence3IndexToRight() {
     if (this.currentSequence3Index != this.sequenceStrArray.length - 1)
@@ -132,7 +143,8 @@ export class AppComponent {
   }
 
   changePathResult() {
-    this.logs = this.resultPaths[this.resultPathIndex].log;
+    this.processAllCells(this.resetSelected);
+    this.resultLog = this.resultPaths[this.resultPathIndex].log;
 
     let currentResult = this.resultPaths[this.resultPathIndex];
     for (let i = 0; i < currentResult.matrixesPositions.length; ++i) {
