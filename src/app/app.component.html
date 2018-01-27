@@ -6,7 +6,7 @@
           <div class="ui-g-6">
             <span class="ui-float-label" style="margin-top: 15px; margin-bottom: 40px">
               <input id="float-input" #input1
-                     (input)="input1.value=$event.target.value.toUpperCase(); sequence2 = $event.target.value.toUpperCase()"
+                     (input)="input1.value=$event.target.value.toUpperCase(); sequence1 = $event.target.value.toUpperCase()"
                      [(ngModel)]="sequence1" OnlyAGCT="true" type="text" size="50" pInputText>
               <label for="float-input">Sekwencja 1</label>
             </span>
@@ -160,14 +160,14 @@
                 <span >
                   <div style="text-align: center; margin-top: 20px; margin-bottom: 20px; display: inline-flex">
                     <button style="margin-top: -5px; margin-right: 20px;" pButton type="button" (click)="resultPathIndexToLeft()" icon="fa-chevron-left"></button>
-                      <div>Rezultat {{resultPathIndex + 1}}</div>
+                      <div>Rezultat {{resultPathIndex + 1}}/{{resultPaths.length}}</div>
                     <button style="margin-top: -5px; margin-left: 15px;" pButton type="button" (click)="resultPathIndexToRight()" icon="fa-chevron-right"></button>
                   </div>
                 </span>
               </div>
               <br>
             </div>
-            <textarea [(ngModel)]="logs" rows="10" class="log-textarea"
+            <textarea #logTextarea [(ngModel)]="logs" rows="15" class="log-textarea"
                       pInputTextarea disabled="true">
             </textarea>
             <div style="text-align: center; margin-top: 10px; color: #898989;">

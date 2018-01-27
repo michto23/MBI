@@ -10,7 +10,7 @@ class MatrixNode {
    * @constructor
    */
   constructor() {
-    this.value_ = NaN;
+    this.value_ = null;
     this.previousCells_ = new Array();
   }
 

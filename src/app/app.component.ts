@@ -1,4 +1,4 @@
-import {Component, Pipe, PipeTransform} from '@angular/core';
+import {Component, ElementRef, Pipe, PipeTransform, ViewChild} from '@angular/core';
 import { PenaltyRow } from '../model/penaltyRow';
 import {FormControl} from "@angular/forms";
 import {Observable} from "rxjs/Observable";
@@ -15,6 +15,7 @@ import {ResultPath} from "../model/resultPath";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('logTextarea') private logTextareaContainer: ElementRef;
 
   A_NUCL_STR = Constants.A_NUCL;
   G_NUCL_STR = Constants.G_NUCL;
@@ -34,6 +35,7 @@ export class AppComponent {
   showNextStepBtn = false;
   currentSequence3Index: number;
   resultPathIndex: number;
+  stepCounter: number;
 
   sequenceAligner : SequenceAligner;
   logs : string;
@@ -52,6 +54,7 @@ export class AppComponent {
     this.sequence3 = "TACC";
     this.currentSequence3Index = 0;
     this.resultPathIndex = 0;
+    this.stepCounter = 1;
   }
 
   penaltyChanged(event, rowNucl, colNucl) {
@@ -69,7 +72,7 @@ export class AppComponent {
 
     this.allResultMatrixes = this.prepareResultMatrixes();
     this.currentResultMatrix = this.allResultMatrixes[0];
-    this.logs = this.sequenceAligner.getLastStepInfo() + "\n";
+    this.logs = this.stepCounter + ". " + this.sequenceAligner.getLastStepInfo() + "\n";
 
     setTimeout(()=>{
       this.sequenceAligner.doAllSteps();
@@ -87,10 +90,44 @@ export class AppComponent {
 
   runStepAlgorithm () {
     this.showNextStepBtn = true;
+    this.sequenceAligner = new SequenceAligner(this.sequence1, this.sequence2, this.sequence3);
+    this.setAlignerPenalties(this.sequenceAligner);
+
+    this.allResultMatrixes = this.prepareResultMatrixes();
+    this.setAlignerPenalties(this.sequenceAligner);
+    this.currentResultMatrix = this.allResultMatrixes[0];
+    this.logs = this.stepCounter + ". " + this.sequenceAligner.getLastStepInfo() + "\n";
+
+    console.log(this.currentResultMatrix);
+
+    this.currentSequence3Index = 0;
+    this.sequenceStrArray = AppComponent.prepareSequenceStrArray(this.sequence3);
   }
 
   nextStep () {
+    ++this.stepCounter;
+    try {
+      this.sequenceAligner.doOneStep();
+      this.logs += this.stepCounter + ". " + this.sequenceAligner.getLastStepInfo() + "\n";
 
+      if (this.stepCounter%((this.sequence1.length + 1)*(this.sequence2.length + 1)) == 1)
+        this.currentSequence3IndexToRight();
+    }
+    catch(e) {
+      this.showNextStepBtn = false;
+      this.logs += "Algorytm krokowy został zakończony" + "\n";
+      let solutions = this.sequenceAligner.getSolutions();
+      for (let r = 0; r < solutions.length; r += 2) {
+        this.resultPaths.push(new ResultPath(solutions[r], solutions[r + 1], r));
+      }
+      this.changePathResult();
+    }
+    setTimeout(()=>{
+      try {
+        this.logTextareaContainer.nativeElement.scrollTop = this.logTextareaContainer.nativeElement.scrollHeight;
+      } catch(err) { }
+    }, 0)
+    this.processAllCells(this.getMatrixValue);
   }
 
   processAllCells(callback: (i: number, j:number, k:number, scope) => any) : void {
