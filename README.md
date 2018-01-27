@@ -1,4 +1,6 @@
-# SpdbNg2
+# SequenceAligner
+
+Projekt miał na celu przygotowanie aplikacji, która pozwala zrozumieć działanie algorytmu znajdującego uliniowienie trzech sekwencji DNA metodą programowania dynamicznego. Użytkownik może wprowadzić własne dane w postaci 3 sekwencji nukleotydowych oraz macierzy nagród i kar, a następnie śledzić sposób wykonywania obliczeń (krok po kroku). Do wyznaczenia globalnych dopasowań wprowadzonych sekwencji, program wykorzystuje trójwymiarową wersję algorytmu Needlemana-Wunscha.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
