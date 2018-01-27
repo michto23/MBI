@@ -1,5 +1,8 @@
 import {Constants} from "utils/constants"
 
+/**
+ * Class of penalty matrix cell.
+ */
 export class PenaltyRow {
   label: string;
   nuclMap : { [key:string]:number; } = {};
