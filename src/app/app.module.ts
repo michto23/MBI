@@ -9,6 +9,8 @@ import { AgmCoreModule } from '@agm/core';
 import { ChartsModule } from 'ng2-charts';
 import { OnlyNumber } from 'utils/onlyNumber.directive'
 import { OnlyAGCT } from 'utils/onlyAGCT.directive'
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -105,7 +107,9 @@ import { AppComponent } from './app.component';
     InputTextModule,
     TableModule,
     ButtonModule,
-    InputTextareaModule
+    InputTextareaModule,
+    MessagesModule,
+    MessageModule
   ],
   providers: [
 

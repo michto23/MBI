@@ -1,11 +1,13 @@
 import {Constants} from "utils/constants"
 
+/**
+ * Class of result matrix cell.
+ */
 export class ResultCell {
   labelX: string;
   labelY: string;
   value: number;
   selected: boolean;
-  // nuclMap : { [key:string]:number; } = {};
 
   constructor(labelX:string, labelY:string, value: number) {
     this.labelX = labelX;

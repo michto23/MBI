@@ -1,3 +1,6 @@
+/**
+ * Class of result solution.
+ */
 export class ResultPath {
   path: Array<string>;
   matrixesPositions: Array<Array<number>>;

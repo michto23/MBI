@@ -26,7 +26,7 @@ export class OnlyNumber {
         // let it happen, don't do anything
         return;
       }
-      // -
+      // "-"
       if (e.keyCode === 189 && e.target.value == "") {
         return;
       }
