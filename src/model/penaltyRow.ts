@@ -1,6 +1,6 @@
 import {Constants} from "utils/constants"
 
-export class ProbabilityRow {
+export class PenaltyRow {
   label: string;
   nuclMap : { [key:string]:number; } = {};
 

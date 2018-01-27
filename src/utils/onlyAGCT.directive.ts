@@ -12,7 +12,6 @@ export class OnlyAGCT {
   @HostListener('keydown', ['$event']) onKeyDown(event) {
     let e = <KeyboardEvent> event;
     if (this.OnlyAGCT) {
-      console.log(e.keyCode);
       if ([46, 8, 9, 27, 13, 110, 190].indexOf(e.keyCode) !== -1 ||
         // Allow: Ctrl+A
         (e.keyCode === 65 && (e.ctrlKey || e.metaKey)) ||

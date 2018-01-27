@@ -49,6 +49,7 @@ import {PanelModule} from 'primeng/panel';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 import { AppComponent } from './app.component';
 
@@ -103,7 +104,8 @@ import { AppComponent } from './app.component';
     PanelModule,
     InputTextModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    InputTextareaModule
   ],
   providers: [
 

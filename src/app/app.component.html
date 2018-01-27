@@ -5,24 +5,27 @@
         <div class="ui-g">
           <div class="ui-g-6">
             <span class="ui-float-label" style="margin-top: 15px; margin-bottom: 40px">
-              <input id="float-input" #input1 (input)="input1.value=$event.target.value.toUpperCase()"
+              <input id="float-input" #input1
+                     (input)="input1.value=$event.target.value.toUpperCase(); sequence2 = $event.target.value.toUpperCase()"
                      [(ngModel)]="sequence1" OnlyAGCT="true" type="text" size="50" pInputText>
               <label for="float-input">Sekwencja 1</label>
             </span>
             <span class="ui-float-label" style="margin-bottom: 40px">
-              <input id="float-input2" #input2 (input)="input2.value=$event.target.value.toUpperCase()"
+              <input id="float-input2" #input2
+                     (input)="input2.value=$event.target.value.toUpperCase(); sequence2 = $event.target.value.toUpperCase()"
                      [(ngModel)]="sequence2" OnlyAGCT="true" type="text" size="50" pInputText>
               <label for="float-input2">Sekwencja 2</label>
             </span>
             <span class="ui-float-label" style="margin-bottom: 40px">
-              <input id="float-input3" #input3 (input)="input3.value=$event.target.value.toUpperCase()"
+              <input id="float-input3" #input3
+                     (input)="input3.value=$event.target.value.toUpperCase(); sequence3 = $event.target.value.toUpperCase()"
                      [(ngModel)]="sequence3" OnlyAGCT="true" type="text" size="50" pInputText>
               <label for="float-input3">Sekwencja 3</label>
             </span>
           </div>
           <div class="ui-g-6">
             <div class="ui-g-6">
-              <p-table [value]="probabilityRows">
+              <p-table [value]="penaltyRows">
                 <ng-template pTemplate="header">
                   <tr>
                     <th></th>
@@ -39,7 +42,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="probabilityChanged($event,row.label,A_NUCL_STR)" [(ngModel)]="row.nuclMap[A_NUCL_STR]">
+                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,A_NUCL_STR)" [(ngModel)]="row.nuclMap[A_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[A_NUCL_STR]}}
@@ -49,7 +52,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="probabilityChanged($event,row.label,G_NUCL_STR)" [(ngModel)]="row.nuclMap[G_NUCL_STR]">
+                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,G_NUCL_STR)" [(ngModel)]="row.nuclMap[G_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[G_NUCL_STR]}}
@@ -59,7 +62,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="probabilityChanged($event,row.label,C_NUCL_STR)" [(ngModel)]="row.nuclMap[C_NUCL_STR]">
+                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,C_NUCL_STR)" [(ngModel)]="row.nuclMap[C_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[C_NUCL_STR]}}
@@ -69,7 +72,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="probabilityChanged($event,row.label,T_NUCL_STR)" [(ngModel)]="row.nuclMap[T_NUCL_STR]">
+                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,T_NUCL_STR)" [(ngModel)]="row.nuclMap[T_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[T_NUCL_STR]}}
@@ -79,7 +82,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="probabilityChanged($event,row.label,BREAK_NUCL_STR)" [(ngModel)]="row.nuclMap[BREAK_NUCL_STR]">
+                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,BREAK_NUCL_STR)" [(ngModel)]="row.nuclMap[BREAK_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[BREAK_NUCL_STR]}}
@@ -90,7 +93,7 @@
                 </ng-template>
               </p-table>
               <div style="text-align: center; margin-top: 10px; color: #898989;">
-                <span >MACIERZ PRAWDOPODOBIEŃSTW</span>
+                <span >MACIERZ KAR I NAGRÓD</span>
               </div>
             </div>
           </div>
@@ -105,7 +108,7 @@
     <div class="ui-g-12">
       <p-panel header="Wyniki" [style]="{'margin-bottom':'20px'}">
         <div class="ui-g">
-          <div class="ui-g-9">
+          <div class="ui-g-8">
 
 
             <div *ngIf="sequenceStrArray.length > 0" style="text-align: center; margin-top: 20px; display: inline-flex">
@@ -126,43 +129,40 @@
 
             <div style="margin: 30px;">
               <table class="result-table">
-                <tr class="tr-label">
-                  <span class="result-table-label"></span>
-                  <td><span class="result-table-label">A</span></td>
-                  <td><span class="result-table-label">A</span></td>
-                  <td><span class="result-table-label">A</span></td>
-                </tr>
-                <tr>
-                  <span></span>
-                  <td>-12</td>
-                  <td>-10</td>
-                  <td>-8</td>
-                  <td>-12</td>
-                </tr>
-                <tr>
-                  <span class="result-table-label">A</span>
-                  <td>-10</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <span class="result-table-label">A</span>
-                  <td>-8</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+                <ng-container *ngFor="let matrix of currentResultMatrix; let i = index">
+                  <tr [ngClass]="{'tr-label' : i === 0}">
+                    <ng-container *ngFor="let cell of matrix; let j = index">
+                      <td *ngIf="i == 0">
+                        <span class="result-table-label">
+                        {{cell.labelX}}
+                      </span>
+                      </td>
+                      <span *ngIf="j == 0 && i != 0" class="result-table-label">
+                        {{cell.labelY}}
+                      </span>
+                      <td [ngClass]="{'selected-cell' : cell.selected}"  *ngIf="!(i == 0 || (j == 0 && i != 0))">
+                        <span>
+                          {{cell.value}}
+                        </span>
+                      </td>
+                    </ng-container>
+                  </tr>
+                </ng-container>
               </table>
             </div>
-
-
-
-
-
           </div>
-          <div class="ui-g-3">
-            Logiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+          <div class="ui-g-4">
+            <textarea [(ngModel)]="logs" rows="10" class="log-textarea"
+                      pInputTextarea disabled="true">
+            </textarea>
+            <br>
+            <div *ngIf="resultPaths.length > 0" style="text-align: center; margin-top: 20px; display: inline-flex">
+              <button style="margin-top: -5px; margin-right: 20px;" pButton type="button" (click)="resultPathIndexToLeft()" icon="fa-chevron-left"></button>
+              <div>
+                Rezultat {{resultPathIndex + 1}}
+              </div>
+              <button style="margin-top: -5px; margin-left: 15px;" pButton type="button" (click)="resultPathIndexToRight()" icon="fa-chevron-right"></button>
+            </div>
           </div>
         </div>
       </p-panel>

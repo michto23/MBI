@@ -15,6 +15,8 @@ table.result-table {
   border: 1px solid #4297d7;
   text-align: left;
   padding: 8px;
+  min-width: 35px;
+  height: 35px;
 }
 
 .result-table tr.tr-label > td {
@@ -46,4 +48,16 @@ table.result-table {
 .current-nucl {
   color: #ff00f3;
   font-weight: bolder;
+}
+
+.selected-cell {
+  background-color: rgba(255, 0, 243, 0.32);
+  font-weight: bolder;
+}
+
+.log-textarea {
+  width: 100%;
+  max-width: 100%;
+  color: #026890;
+  opacity: 1
 }
