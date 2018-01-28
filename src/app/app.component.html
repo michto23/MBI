@@ -43,7 +43,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,A_NUCL_STR)" [(ngModel)]="row.nuclMap[A_NUCL_STR]">
+                          <input type="number" (input)="penaltyChanged($event,row.label,A_NUCL_STR)" [(ngModel)]="row.nuclMap[A_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[A_NUCL_STR]}}
@@ -53,7 +53,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,G_NUCL_STR)" [(ngModel)]="row.nuclMap[G_NUCL_STR]">
+                          <input type="number" (input)="penaltyChanged($event,row.label,G_NUCL_STR)" [(ngModel)]="row.nuclMap[G_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[G_NUCL_STR]}}
@@ -63,7 +63,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,C_NUCL_STR)" [(ngModel)]="row.nuclMap[C_NUCL_STR]">
+                          <input type="number" (input)="penaltyChanged($event,row.label,C_NUCL_STR)" [(ngModel)]="row.nuclMap[C_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[C_NUCL_STR]}}
@@ -73,7 +73,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,T_NUCL_STR)" [(ngModel)]="row.nuclMap[T_NUCL_STR]">
+                          <input type="number" (input)="penaltyChanged($event,row.label,T_NUCL_STR)" [(ngModel)]="row.nuclMap[T_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[T_NUCL_STR]}}
@@ -83,7 +83,7 @@
                     <td pEditableColumn>
                       <p-cellEditor>
                         <ng-template pTemplate="input">
-                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,BREAK_NUCL_STR)" [(ngModel)]="row.nuclMap[BREAK_NUCL_STR]">
+                          <input type="number" (input)="penaltyChanged($event,row.label,BREAK_NUCL_STR)" [(ngModel)]="row.nuclMap[BREAK_NUCL_STR]">
                         </ng-template>
                         <ng-template pTemplate="output">
                           {{row.nuclMap[BREAK_NUCL_STR]}}

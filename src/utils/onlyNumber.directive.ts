@@ -27,7 +27,7 @@ export class OnlyNumber {
         return;
       }
       // "-"
-      if (e.keyCode === 189 && e.target.value == "") {
+      if ((e.keyCode === 189 || e.keyCode === 173) && e.target.value == "") {
         return;
       }
       // Ensure that it is a number and stop the keypress

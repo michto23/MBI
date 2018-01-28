@@ -346,12 +346,12 @@ export class AppComponent {
 
     //At least one penalty cell empty
     for (let i = 0; i < this.penaltyRows.length; ++i) {
-      nucls.forEach(nucl => {
-        if (this.penaltyRows[i].nuclMap[nucl] == null || this.penaltyRows[i].nuclMap[nucl].toString() == "") {
+      for (let j = 0; j < nucls.length; ++j) {
+        if (this.penaltyRows[i].nuclMap[nucls[j]] == null || this.penaltyRows[i].nuclMap[nucls[j]].toString() == "") {
           this.showError("Macierz kar i nagród musi być wypełniona.");
           return false;
         }
-      });
+      }
     }
 
     return true;
