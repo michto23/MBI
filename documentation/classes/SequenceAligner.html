@@ -1,0 +1,2552 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sequence-aligner documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sequence-aligner documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">sequence-aligner documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AppModule.html" >AppModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-directives-links"
+                            >
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/OnlyAGCT.html" >OnlyAGCT</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/OnlyNumber.html" >OnlyNumber</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/Constants.html" >Constants</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/MatrixNode.html" >MatrixNode</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/PenaltyRow.html" >PenaltyRow</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/ResultCell.html" >ResultCell</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/ResultPath.html" >ResultPath</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/SequenceAligner.html"  data-type="entity-link" class="active" >SequenceAligner</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">sequence-aligner documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AppModule.html" >AppModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#directives-links"
+                   >
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/OnlyAGCT.html" >OnlyAGCT</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/OnlyNumber.html" >OnlyNumber</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/Constants.html" >Constants</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/MatrixNode.html" >MatrixNode</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/PenaltyRow.html" >PenaltyRow</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/ResultCell.html" >ResultCell</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/ResultPath.html" >ResultPath</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/SequenceAligner.html"  data-type="entity-link" class="active" >SequenceAligner</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>SequenceAligner</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/algorithm/algorithm.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Represents the sequence alignment controller.</p>
+
+            </p>
+
+
+
+
+            <section>
+                <h3 id="index">Index</h3>
+                <table class="table table-sm table-bordered index-table">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                <h6><b>Properties</b></h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <ul class="index-list">
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#currentIdx">currentIdx</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#fMatrix_">fMatrix_</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#lastStepInfo_">lastStepInfo_</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#nuclIdMap_">nuclIdMap_</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#penaltyMatrix_">penaltyMatrix_</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#seqA_">seqA_</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#seqB_">seqB_</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#seqC_">seqC_</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <h6><b>Methods</b></h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <ul class="index-list">
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#addMatrixPreviousCell">addMatrixPreviousCell</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#calcCurrentCell">calcCurrentCell</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#calcReachableValue">calcReachableValue</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Public</span>
+                                        <a href="#doAllSteps">doAllSteps</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Public</span>
+                                        <a href="#doOneStep">doOneStep</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Public</span>
+                                        <a href="#getLastStepInfo">getLastStepInfo</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#getMatrixPreviousCells">getMatrixPreviousCells</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Public</span>
+                                        <a href="#getMatrixValue">getMatrixValue</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#getPenaltyPair">getPenaltyPair</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#getPenaltyTrio">getPenaltyTrio</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Public</span>
+                                        <a href="#getSolutions">getSolutions</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#initFMatrix">initFMatrix</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#moveToNextCell">moveToNextCell</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#setMatrixValue">setMatrixValue</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Public</span>
+                                        <a href="#setPenaltyPair">setPenaltyPair</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Private</span>
+                                        <a href="#traverseSolutions">traverseSolutions</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h3 id="constructor">Constructor</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>constructor(seqA: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, seqB: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, seqC: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                                </td>
+                            </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/algorithm/algorithm.ts:61</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>The constructor</p>
+            </div>
+                                        <div>
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>seqA</td>
+                                                              <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>Sequence A</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>seqB</td>
+                                                              <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>Sequence B</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>seqC</td>
+                                                              <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>Sequence C</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+            <section>
+                
+                    <h3 id="methods">
+                        Methods
+                    </h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="addMatrixPreviousCell"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        addMatrixPreviousCell
+                                        </b>
+                                        <a href="#addMatrixPreviousCell"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>addMatrixPreviousCell(a: , b: , c: , cell: )</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">src/algorithm/algorithm.ts:200</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Adds a previous cell to a cell in the F matrix.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>a</td>
+                                                              <td>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>b</td>
+                                                              <td>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>c</td>
+                                                              <td>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>cell</td>
+                                                              <td>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="calcCurrentCell"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        calcCurrentCell
+                                        </b>
+                                        <a href="#calcCurrentCell"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>calcCurrentCell()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="239" class="link-to-prism">src/algorithm/algorithm.ts:239</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Calculates the value of the cell the current cell pointer points at.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="calcReachableValue"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        calcReachableValue
+                                        </b>
+                                        <a href="#calcReachableValue"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>calcReachableValue(a: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, b: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, c: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, p1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, p2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, p3: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">src/algorithm/algorithm.ts:225</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Calculates the new value from a given reachable cell.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>a</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>b</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>c</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>p1</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>p2</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>p3</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code>{}</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="doAllSteps"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        doAllSteps
+                                        </b>
+                                        <a href="#doAllSteps"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>doAllSteps()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="334" class="link-to-prism">src/algorithm/algorithm.ts:334</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Goes through all the remaining steps of the simulation.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="doOneStep"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        doOneStep
+                                        </b>
+                                        <a href="#doOneStep"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>doOneStep()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="326" class="link-to-prism">src/algorithm/algorithm.ts:326</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Performs one step of the simulation. Throws an exception if it&#39;s not possible.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="getLastStepInfo"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        getLastStepInfo
+                                        </b>
+                                        <a href="#getLastStepInfo"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>getLastStepInfo()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="348" class="link-to-prism">src/algorithm/algorithm.ts:348</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns a text info about the last executed step.</p>
+            </div>
+            
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                <p>Step info</p>
+            
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="getMatrixPreviousCells"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        getMatrixPreviousCells
+                                        </b>
+                                        <a href="#getMatrixPreviousCells"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>getMatrixPreviousCells(a: , b: , c: )</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="211" class="link-to-prism">src/algorithm/algorithm.ts:211</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Return a list of coordinates of the previous cells of a cell in the F matrix.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>a</td>
+                                                              <td>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>b</td>
+                                                              <td>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>c</td>
+                                                              <td>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="getMatrixValue"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        getMatrixValue
+                                        </b>
+                                        <a href="#getMatrixValue"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>getMatrixValue(a: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, b: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, c: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="124" class="link-to-prism">src/algorithm/algorithm.ts:124</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns the value of the F matrix at the given coordinates.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>a</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The 1st coordinate, corresponding to the sequence A.</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>b</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The 2nd coordinate, corresponding to the sequence B.</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>c</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The 3rd coordinate, corresponding to the sequence C.</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                <p>The requested value.</p>
+            
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="getPenaltyPair"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        getPenaltyPair
+                                        </b>
+                                        <a href="#getPenaltyPair"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>getPenaltyPair(nucl1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, nucl2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">src/algorithm/algorithm.ts:157</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns the penalty value between 2 nucleotides.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>nucl1</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The first nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>nucl2</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The second nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                <p>The value of the penalty.</p>
+            
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="getPenaltyTrio"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        getPenaltyTrio
+                                        </b>
+                                        <a href="#getPenaltyTrio"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>getPenaltyTrio(nucl1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, nucl2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, nucl3: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/algorithm/algorithm.ts:168</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns a penalty value for 3 nucleotides as a sum of penalties between all the possible pairs.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>nucl1</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The first nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>nucl2</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The second nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>nucl3</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The third nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                <p>The value of the penalty.</p>
+            
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="getSolutions"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        getSolutions
+                                        </b>
+                                        <a href="#getSolutions"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>getSolutions()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="288" class="link-to-prism">src/algorithm/algorithm.ts:288</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Returns a list of solutions made of global alignments and the paths in the F matrix that lead to them.</p>
+            </div>
+            
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                <p>Solutions list, eg. [[&quot;ACT&quot;,&quot;-CT&quot;,&quot;A--&quot;], [(0,0,0),(1,0,1),(2,1,1),(3,2,1)]]</p>
+            
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="initFMatrix"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        initFMatrix
+                                        </b>
+                                        <a href="#initFMatrix"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>initFMatrix(dimA: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, dimB: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, dimC: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/algorithm/algorithm.ts:103</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Initializes the F matrix with empty nodes.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>dimA</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>Size of the 1st dimension.</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>dimB</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>Size of the 2nd dimension.</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>dimC</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>Size of the 3rd dimension.</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="moveToNextCell"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        moveToNextCell
+                                        </b>
+                                        <a href="#moveToNextCell"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>moveToNextCell()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">src/algorithm/algorithm.ts:175</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Moves the cell pointer to the next available cell. Throws an exception if it&#39;s not possible.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="setMatrixValue"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        setMatrixValue
+                                        </b>
+                                        <a href="#setMatrixValue"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>setMatrixValue(a: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, b: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, c: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">src/algorithm/algorithm.ts:135</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Sets the value of the F matrix at the given coordinates.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>a</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The 1st coordinate, corresponding to the sequence A.</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>b</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The 2nd coordinate, corresponding to the sequence B.</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>c</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The 3rd coordinate, corresponding to the sequence C.</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>value</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The desired value.</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="setPenaltyPair"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        setPenaltyPair
+                                        </b>
+                                        <a href="#setPenaltyPair"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>setPenaltyPair(nucl1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, nucl2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/algorithm/algorithm.ts:145</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Sets the penalty value between a pair of nucleotides.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>nucl1</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The first nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>nucl2</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The second nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>value</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>The value of the penalty.</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="traverseSolutions"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        traverseSolutions
+                                        </b>
+                                        <a href="#traverseSolutions"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>traverseSolutions(cell: , seqs: string[], cells: [])</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="300" class="link-to-prism">src/algorithm/algorithm.ts:300</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Traverses through the cells using the previous cells pointers, returns a value when the (0,0,0) cell is reached.</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>cell</td>
+                                                              <td>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>seqs</td>
+                                                              <td>
+                                                                      <code>string[]</code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>cells</td>
+                                                              <td>
+                                                                      <code>[]</code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+
+            <section>
+                
+                    <h3 id="inputs">
+                        Properties
+                    </h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="currentIdx"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        currentIdx
+                                        </b>
+                                        <a href="#currentIdx"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-reset"></span><code>currentIdx:     <code></code>
+            </code>
+                                </td>
+                            </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/algorithm/algorithm.ts:60</a></div>
+                                        </td>
+                                    </tr>
+            
+            
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="fMatrix_"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        fMatrix_
+                                        </b>
+                                        <a href="#fMatrix_"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-reset"></span><code>fMatrix_:     <code>[][][]</code>
+            </code>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code>[][][]</code>
+            
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/algorithm/algorithm.ts:57</a></div>
+                                        </td>
+                                    </tr>
+            
+            
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="lastStepInfo_"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        lastStepInfo_
+                                        </b>
+                                        <a href="#lastStepInfo_"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-reset"></span><code>lastStepInfo_:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            </code>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/algorithm/algorithm.ts:61</a></div>
+                                        </td>
+                                    </tr>
+            
+            
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="nuclIdMap_"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        nuclIdMap_
+                                        </b>
+                                        <a href="#nuclIdMap_"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-reset"></span><code>nuclIdMap_:     <code>literal type</code>
+            </code>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code>literal type</code>
+            
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/algorithm/algorithm.ts:59</a></div>
+                                        </td>
+                                    </tr>
+            
+            
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="penaltyMatrix_"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        penaltyMatrix_
+                                        </b>
+                                        <a href="#penaltyMatrix_"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-reset"></span><code>penaltyMatrix_:     <code>number[][]</code>
+            </code>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code>number[][]</code>
+            
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/algorithm/algorithm.ts:58</a></div>
+                                        </td>
+                                    </tr>
+            
+            
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="seqA_"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        seqA_
+                                        </b>
+                                        <a href="#seqA_"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-reset"></span><code>seqA_:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            </code>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/algorithm/algorithm.ts:54</a></div>
+                                        </td>
+                                    </tr>
+            
+            
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="seqB_"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        seqB_
+                                        </b>
+                                        <a href="#seqB_"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-reset"></span><code>seqB_:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            </code>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/algorithm/algorithm.ts:55</a></div>
+                                        </td>
+                                    </tr>
+            
+            
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="seqC_"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Private</span>
+                                        seqC_
+                                        </b>
+                                        <a href="#seqC_"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-reset"></span><code>seqC_:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            </code>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+            
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/algorithm/algorithm.ts:56</a></div>
+                                        </td>
+                                    </tr>
+            
+            
+                        </tbody>
+                    </table>
+            </section>
+
+    </div>
+
+
+    <div class="tab-pane fade tab-source-code" id="c-source">
+        <pre class="line-numbers"><code class="language-typescript">class MatrixNode {
+  private value_: number;
+  private previousCells_: [number, number, number][];
+
+  /**
+   * The constructor.
+   * @constructor
+   */
+  constructor() {
+    this.value_ &#x3D; null;
+    this.previousCells_ &#x3D; new Array();
+  }
+
+  /**
+   * Returns the value from the cell.
+   * @returns {number} Value from the cell.
+   */
+  public getValue() {
+    return this.value_;
+  }
+
+  /**
+   * Sets the value of the cell.
+   * @param {number} value Desired value of the cell.
+   */
+  public setValue(value: number) {
+    this.value_ &#x3D; value;
+  }
+
+  /**
+   * Adds a previous cell to the list.
+   * @param {[number , number , number]} cell Previous cell&#x27;s coordinates.
+   */
+  public addPreviousCell(cell: [number, number, number]) {
+    this.previousCells_.push(cell);
+  }
+
+  /**
+   * Returns an array of the previous cells.
+   * @returns {[number , number , number][]} List of the previous cells&#x27; coordinates.
+   */
+  public getPreviousCells() {
+    return this.previousCells_;
+  }
+}
+
+/**
+ * Represents the sequence alignment controller.
+ */
+export class SequenceAligner {
+  private seqA_: string;
+  private seqB_: string;
+  private seqC_: string;
+  private fMatrix_: MatrixNode[][][];
+  private penaltyMatrix_: number[][];
+  private nuclIdMap_: { [key: string]: number; };
+  private currentIdx: [number, number, number];
+  private lastStepInfo_: string;
+
+  /**
+   * The constructor
+   * @constructor
+   * @param {string} seqA Sequence A
+   * @param {string} seqB Sequence B
+   * @param {string} seqC Sequence C
+   */
+  constructor(seqA: string, seqB: string, seqC: string) {
+    // Store the sequences
+    this.seqA_ &#x3D; seqA;
+    this.seqB_ &#x3D; seqB;
+    this.seqC_ &#x3D; seqC;
+
+    // Initialize the nucleotide id map
+    this.nuclIdMap_ &#x3D; {};
+    this.nuclIdMap_[&quot;A&quot;] &#x3D; 0;
+    this.nuclIdMap_[&quot;G&quot;] &#x3D; 1;
+    this.nuclIdMap_[&quot;C&quot;] &#x3D; 2;
+    this.nuclIdMap_[&quot;T&quot;] &#x3D; 3;
+    this.nuclIdMap_[&quot;-&quot;] &#x3D; 4;
+
+    // Initialize the penalty matrix
+    this.penaltyMatrix_ &#x3D; [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]];
+
+    // Initialize the F matrix
+    this.initFMatrix(this.seqA_.length + 1, this.seqB_.length + 1, this.seqC_.length + 1);
+    this.setMatrixValue(0, 0, 0, 0);
+    this.lastStepInfo_ &#x3D; &quot;Komórka (0,0,0) została zainicjalizowana wartością 0.\n&quot;;
+
+    // Initialize the current cell pointer
+    this.currentIdx &#x3D; [0, 0, 0];
+    this.moveToNextCell();
+  }
+
+  /**
+   * Initializes the F matrix with empty nodes.
+   * @param {number} dimA Size of the 1st dimension.
+   * @param {number} dimB Size of the 2nd dimension.
+   * @param {number} dimC Size of the 3rd dimension.
+   */
+  private initFMatrix(dimA: number, dimB: number, dimC: number) {
+    this.fMatrix_ &#x3D; new Array();
+    for (let a &#x3D; 0; a &lt; dimA; ++a) {
+      let chunk2 &#x3D; new Array();
+      for (let b &#x3D; 0; b &lt; dimB; ++b) {
+        let chunk1 &#x3D; new Array();
+        for (let c &#x3D; 0; c &lt; dimC; ++c)
+          chunk1.push(new MatrixNode());
+        chunk2.push(chunk1);
+      }
+      this.fMatrix_.push(chunk2);
+    }
+  }
+
+  /**
+   * Returns the value of the F matrix at the given coordinates.
+   * @param {number} a The 1st coordinate, corresponding to the sequence A.
+   * @param {number} b The 2nd coordinate, corresponding to the sequence B.
+   * @param {number} c The 3rd coordinate, corresponding to the sequence C.
+   * @returns {number} The requested value.
+   */
+  public getMatrixValue(a: number, b: number, c: number) {
+    return this.fMatrix_[a][b][c].getValue();
+  }
+
+  /**
+   * Sets the value of the F matrix at the given coordinates.
+   * @param {number} a The 1st coordinate, corresponding to the sequence A.
+   * @param {number} b The 2nd coordinate, corresponding to the sequence B.
+   * @param {number} c The 3rd coordinate, corresponding to the sequence C.
+   * @param {number} value The desired value.
+   */
+  private setMatrixValue(a: number, b: number, c: number, value: number) {
+    this.fMatrix_[a][b][c].setValue(value);
+  }
+
+  /**
+   * Sets the penalty value between a pair of nucleotides.
+   * @param {string} nucl1 The first nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).
+   * @param {string} nucl2 The second nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).
+   * @param {number} value The value of the penalty.
+   */
+  public setPenaltyPair(nucl1: string, nucl2: string, value: number) {
+    this.penaltyMatrix_[this.nuclIdMap_[nucl1]][this.nuclIdMap_[nucl2]] &#x3D; value;
+    if (nucl1 !&#x3D; nucl2)
+      this.penaltyMatrix_[this.nuclIdMap_[nucl2]][this.nuclIdMap_[nucl1]] &#x3D; value;
+  }
+
+  /**
+   * Returns the penalty value between 2 nucleotides.
+   * @param {string} nucl1 The first nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).
+   * @param {string} nucl2 The second nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).
+   * @returns {number} The value of the penalty.
+   */
+  private getPenaltyPair(nucl1: string, nucl2: string) {
+    return this.penaltyMatrix_[this.nuclIdMap_[nucl1]][this.nuclIdMap_[nucl2]];
+  }
+
+  /**
+   * Returns a penalty value for 3 nucleotides as a sum of penalties between all the possible pairs.
+   * @param {string} nucl1 The first nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).
+   * @param {string} nucl2 The second nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).
+   * @param {string} nucl3 The third nucleotide (&quot;A&quot;/&quot;G&quot;/&quot;C&quot;/&quot;T&quot;/&quot;-&quot;).
+   * @returns {number} The value of the penalty.
+   */
+  private getPenaltyTrio(nucl1: string, nucl2: string, nucl3: string) {
+    return this.getPenaltyPair(nucl1, nucl2) + this.getPenaltyPair(nucl1, nucl3) + this.getPenaltyPair(nucl2, nucl3);
+  }
+
+  /**
+   * Moves the cell pointer to the next available cell. Throws an exception if it&#x27;s not possible.
+   */
+  private moveToNextCell() {
+    if (this.currentIdx[0] + 1 &lt;&#x3D; this.seqA_.length) {
+      ++this.currentIdx[0];
+    }
+    else if (this.currentIdx[1] + 1 &lt;&#x3D; this.seqB_.length) {
+      this.currentIdx[0] &#x3D; 0;
+      ++this.currentIdx[1];
+    }
+    else if (this.currentIdx[2] + 1 &lt;&#x3D; this.seqC_.length) {
+      this.currentIdx[0] &#x3D; 0;
+      this.currentIdx[1] &#x3D; 0;
+      ++this.currentIdx[2];
+    }
+    else {
+      throw &quot;finish&quot;;
+    }
+  }
+
+  /**
+   * Adds a previous cell to a cell in the F matrix.
+   * @param a
+   * @param b
+   * @param c
+   * @param cell
+   */
+  private addMatrixPreviousCell(a, b, c, cell) {
+    this.fMatrix_[a][b][c].addPreviousCell(cell);
+  }
+
+  /**
+   * Return a list of coordinates of the previous cells of a cell in the F matrix.
+   * @param a
+   * @param b
+   * @param c
+   * @returns {[number , number , number][]}
+   */
+  private getMatrixPreviousCells(a, b, c) {
+    return this.fMatrix_[a][b][c].getPreviousCells();
+  }
+
+  /**
+   * Calculates the new value from a given reachable cell.
+   * @param {number} a
+   * @param {number} b
+   * @param {number} c
+   * @param {string} p1
+   * @param {string} p2
+   * @param {string} p3
+   * @returns {(number | number[])[]}
+   */
+  private calcReachableValue(a: number, b: number, c: number, p1: string, p2: string, p3: string) {
+    const v &#x3D; this.getMatrixValue(a, b, c);
+    const p &#x3D; this.getPenaltyTrio(p1, p2, p3);
+    let ps &#x3D; p.toString()
+    if (ps[0] &#x3D;&#x3D;&#x3D; &quot;-&quot;)
+      ps &#x3D; &quot;(&quot; + ps + &quot;)&quot;;
+    const n &#x3D; v + p;
+    this.lastStepInfo_ +&#x3D; &quot;F(&quot; + a + &quot;,&quot; + b + &quot;,&quot; + c + &quot;) + e(&quot; + p1 + &quot;,&quot; + p2 + &quot;,&quot; + p3 + &quot;) &#x3D; &quot; + v + &quot; + &quot; + ps + &quot; &#x3D; &quot; + n + &quot;\n&quot;;
+    return [n, [a, b, c]];
+  }
+
+  /**
+   * Calculates the value of the cell the current cell pointer points at.
+   */
+  private calcCurrentCell() {
+    const a &#x3D; this.currentIdx[0];
+    const b &#x3D; this.currentIdx[1];
+    const c &#x3D; this.currentIdx[2];
+
+    this.lastStepInfo_ &#x3D; &quot;&quot;;
+
+    // Calculate values from the reachable cells
+    let vals &#x3D; new Array();
+    if (a &gt; 0 &amp;&amp; b &gt; 0 &amp;&amp; c &gt; 0)
+      vals.push(this.calcReachableValue(a - 1, b - 1, c - 1, this.seqA_[a - 1], this.seqB_[b - 1], this.seqC_[c - 1]));
+    if (a &gt; 0 &amp;&amp; b &gt; 0)
+      vals.push(this.calcReachableValue(a - 1, b - 1, c, this.seqA_[a - 1], this.seqB_[b - 1], &quot;-&quot;));
+    if (a &gt; 0 &amp;&amp; c &gt; 0)
+      vals.push(this.calcReachableValue(a - 1, b, c - 1, this.seqA_[a - 1], &quot;-&quot;, this.seqC_[c - 1]));
+    if (a &gt; 0)
+      vals.push(this.calcReachableValue(a - 1, b, c, this.seqA_[a - 1], &quot;-&quot;, &quot;-&quot;));
+    if (b &gt; 0 &amp;&amp; c &gt; 0)
+      vals.push(this.calcReachableValue(a, b - 1, c - 1, &quot;-&quot;, this.seqB_[b - 1], this.seqC_[c - 1]));
+    if (b &gt; 0)
+      vals.push(this.calcReachableValue(a, b - 1, c, &quot;-&quot;, this.seqB_[b - 1], &quot;-&quot;));
+    if (c &gt; 0)
+      vals.push(this.calcReachableValue(a, b, c - 1, &quot;-&quot;, &quot;-&quot;, this.seqC_[c - 1]));
+
+    // Sort the values in descending order
+    vals.sort(function (a, b) {
+      if (a[0] &#x3D;&#x3D;&#x3D; b[0])
+        return 0;
+      else
+        return (a[0] &gt; b[0]) ? -1 : 1;
+    });
+
+    // Store all the cells with the max value as previous cells
+    for (const v in vals) {
+      if (vals[v][0] &#x3D;&#x3D;&#x3D; vals[0][0])
+        this.addMatrixPreviousCell(a, b, c, vals[v][1]);
+    }
+
+    // Set value of the current cell
+    this.setMatrixValue(a, b, c, vals[0][0]);
+
+    // Update the step info
+    this.lastStepInfo_ &#x3D; &quot;Wypełniono komórkę (&quot; + a + &quot;,&quot; + b + &quot;,&quot; + c + &quot;) wartością &quot; + vals[0][0] + &quot;, tj. maksymalną z osiągalnych:\n&quot; + this.lastStepInfo_;
+  }
+
+  /**
+   * Returns a list of solutions made of global alignments and the paths in the F matrix that lead to them.
+   * @returns {(string[] | [number , number , number][])[] | any[]} Solutions list, eg. [[&quot;ACT&quot;,&quot;-CT&quot;,&quot;A--&quot;], [(0,0,0),(1,0,1),(2,1,1),(3,2,1)]]
+   */
+  public getSolutions() {
+    const startCell: [number, number, number] &#x3D; [this.seqA_.length, this.seqB_.length, this.seqC_.length];
+    return this.traverseSolutions(startCell, [&quot;&quot;, &quot;&quot;, &quot;&quot;], [startCell]);
+  }
+
+  /**
+   * Traverses through the cells using the previous cells pointers, returns a value when the (0,0,0) cell is reached.
+   * @param {[number , number , number]} cell
+   * @param {string[]} seqs
+   * @param {[number , number , number][]} cells
+   * @returns {any}
+   */
+  private traverseSolutions(cell: [number, number, number], seqs: string[], cells: [number, number, number][]) {
+    const reachableCells &#x3D; this.getMatrixPreviousCells(cell[0], cell[1], cell[2]);
+
+    if (reachableCells.length &#x3D;&#x3D; 0) {
+      // This is the final cell
+      return [seqs, cells];
+    }
+
+    let results &#x3D; new Array();
+    for (let c &#x3D; 0; c &lt; reachableCells.length; ++c) {
+      const sA &#x3D; ((reachableCells[c][0] - cell[0]) &#x3D;&#x3D; 0) ? &quot;-&quot; : this.seqA_[reachableCells[c][0]];
+      const sB &#x3D; ((reachableCells[c][1] - cell[1]) &#x3D;&#x3D; 0) ? &quot;-&quot; : this.seqB_[reachableCells[c][1]];
+      const sC &#x3D; ((reachableCells[c][2] - cell[2]) &#x3D;&#x3D; 0) ? &quot;-&quot; : this.seqC_[reachableCells[c][2]];
+      const seqsResult &#x3D; [sA + seqs[0], sB + seqs[1], sC + seqs[2]];
+      let cellsResult &#x3D; [reachableCells[c]].concat(cells);
+      const partialResults &#x3D; this.traverseSolutions(reachableCells[c], seqsResult, cellsResult);
+
+      results &#x3D; results.concat(partialResults);
+    }
+
+    return results;
+  }
+
+  /**
+   * Performs one step of the simulation. Throws an exception if it&#x27;s not possible.
+   */
+  public doOneStep() {
+    this.calcCurrentCell();
+    this.moveToNextCell();
+  }
+
+  /**
+   * Goes through all the remaining steps of the simulation.
+   */
+  public doAllSteps() {
+    try {
+      while (true) {
+        this.doOneStep();
+      }
+    }
+    catch(e) {
+    }
+  }
+
+  /**
+   * Returns a text info about the last executed step.
+   * @returns {string} Step info
+   */
+  public getLastStepInfo() {
+    return this.lastStepInfo_;
+  }
+}
+
+// Test
+/*
+function clearLog() {
+    let log &#x3D; document.getElementById(&quot;log&quot;);
+    while (log.firstChild) {
+        log.removeChild(log.firstChild);
+    }
+}
+
+function showSolutions() {
+    aligner.drawMatrix(document.getElementById(&quot;matrixF&quot;));
+
+    clearLog();
+
+    let log &#x3D; document.getElementById(&quot;log&quot;);
+
+    const results &#x3D; aligner.getSolutions();
+    for (let r &#x3D; 0; r &lt; results.length; r +&#x3D; 2) {
+        log.appendChild(document.createTextNode(&quot;Dopasowanie globalne nr &quot; + (r / 2 + 1).toString() + &quot;:\n&quot;));
+        log.appendChild(document.createTextNode(&quot;Sekwencja 1: &quot; + results[r][0] + &quot;\n&quot;));
+        log.appendChild(document.createTextNode(&quot;Sekwencja 2: &quot; + results[r][1] + &quot;\n&quot;));
+        log.appendChild(document.createTextNode(&quot;Sekwencja 3: &quot; + results[r][2] + &quot;\n&quot;));
+        log.appendChild(document.createTextNode(&quot;Ścieżka rozwiązania: (&quot; + results[r + 1].join(&quot;)→(&quot;) + &quot;)\n\n&quot;));
+    }
+}
+
+function showStepInfo() {
+    let log &#x3D; document.getElementById(&quot;log&quot;);
+    log.appendChild(document.createTextNode(aligner.getLastStepInfo() + &quot;\n&quot;));
+    log.scrollTop &#x3D; log.scrollHeight;
+}
+
+function nextStep() {
+    try {
+        aligner.doOneStep();
+        aligner.drawMatrix(document.getElementById(&quot;matrixF&quot;));
+        showStepInfo();
+    }
+    catch (e) {
+        showSolutions();
+    }
+}
+
+function allSteps() {
+    try {
+        aligner.doAllSteps();
+    }
+    catch (e) {
+        showSolutions();
+    }
+}
+
+const seq1 &#x3D; &quot;TATACC&quot;;
+const seq2 &#x3D; &quot;TA&quot;;
+const seq3 &#x3D; &quot;TACC&quot;;
+
+// const seq1 &#x3D; &quot;AGTTAT&quot;;
+// const seq2 &#x3D; &quot;GTCGTT&quot;;
+// const seq3 &#x3D; &quot;ATTCGTAT&quot;;
+
+let aligner &#x3D; new SequenceAligner(seq1, seq2, seq3);
+aligner.setPenaltyPair(&quot;A&quot;, &quot;A&quot;, 10);
+aligner.setPenaltyPair(&quot;A&quot;, &quot;G&quot;, -1);
+aligner.setPenaltyPair(&quot;A&quot;, &quot;C&quot;, -3);
+aligner.setPenaltyPair(&quot;A&quot;, &quot;T&quot;, -4);
+aligner.setPenaltyPair(&quot;A&quot;, &quot;-&quot;, -5);
+aligner.setPenaltyPair(&quot;G&quot;, &quot;A&quot;, -1);
+aligner.setPenaltyPair(&quot;G&quot;, &quot;G&quot;, 7);
+aligner.setPenaltyPair(&quot;G&quot;, &quot;C&quot;, -5);
+aligner.setPenaltyPair(&quot;G&quot;, &quot;T&quot;, -3);
+aligner.setPenaltyPair(&quot;G&quot;, &quot;-&quot;, -5);
+aligner.setPenaltyPair(&quot;C&quot;, &quot;A&quot;, -3);
+aligner.setPenaltyPair(&quot;C&quot;, &quot;G&quot;, -5);
+aligner.setPenaltyPair(&quot;C&quot;, &quot;C&quot;, 9);
+aligner.setPenaltyPair(&quot;C&quot;, &quot;T&quot;, 0);
+aligner.setPenaltyPair(&quot;C&quot;, &quot;-&quot;, -5);
+aligner.setPenaltyPair(&quot;T&quot;, &quot;A&quot;, -4);
+aligner.setPenaltyPair(&quot;T&quot;, &quot;G&quot;, -3);
+aligner.setPenaltyPair(&quot;T&quot;, &quot;C&quot;, 0);
+aligner.setPenaltyPair(&quot;T&quot;, &quot;T&quot;, 8);
+aligner.setPenaltyPair(&quot;T&quot;, &quot;-&quot;, -5);
+aligner.setPenaltyPair(&quot;-&quot;, &quot;A&quot;, -5);
+aligner.setPenaltyPair(&quot;-&quot;, &quot;G&quot;, -5);
+aligner.setPenaltyPair(&quot;-&quot;, &quot;C&quot;, -5);
+aligner.setPenaltyPair(&quot;-&quot;, &quot;T&quot;, -5);
+aligner.setPenaltyPair(&quot;-&quot;, &quot;-&quot;, 0);
+
+function onLoad() {
+    document.getElementById(&quot;s1&quot;).innerHTML &#x3D; &quot;Sekwencja 1: &lt;b&gt;&quot; + seq1 + &quot;&lt;/b&gt;&quot;;
+    document.getElementById(&quot;s2&quot;).innerHTML &#x3D; &quot;Sekwencja 2: &lt;b&gt;&quot; + seq2 + &quot;&lt;/b&gt;&quot;;
+    document.getElementById(&quot;s3&quot;).innerHTML &#x3D; &quot;Sekwencja 3: &lt;b&gt;&quot; + seq3 + &quot;&lt;/b&gt;&quot;;
+
+    showStepInfo();
+    aligner.drawMatrix(document.getElementById(&quot;matrixF&quot;));
+}
+*/
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>

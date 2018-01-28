@@ -1,0 +1,3184 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>sequence-aligner documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">sequence-aligner documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">sequence-aligner documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AppModule.html" >AppModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AppComponent.html"  data-type="entity-link" class="active" >AppComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-directives-links"
+                            >
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/OnlyAGCT.html" >OnlyAGCT</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/OnlyNumber.html" >OnlyNumber</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/Constants.html" >Constants</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/MatrixNode.html" >MatrixNode</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/PenaltyRow.html" >PenaltyRow</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/ResultCell.html" >ResultCell</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/ResultPath.html" >ResultPath</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/SequenceAligner.html" >SequenceAligner</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">sequence-aligner documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AppModule.html" >AppModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AppComponent.html"  data-type="entity-link" class="active" >AppComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#directives-links"
+                   >
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/OnlyAGCT.html" >OnlyAGCT</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/OnlyNumber.html" >OnlyNumber</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/Constants.html" >Constants</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/MatrixNode.html" >MatrixNode</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/PenaltyRow.html" >PenaltyRow</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/ResultCell.html" >ResultCell</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/ResultPath.html" >ResultPath</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/SequenceAligner.html" >SequenceAligner</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AppComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+
+    <li>
+        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+    </li>
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/app.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-root</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>app.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./app.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#A_NUCL_STR">A_NUCL_STR</a>
+                            </li>
+                            <li>
+                                <a href="#allResultMatrixes">allResultMatrixes</a>
+                            </li>
+                            <li>
+                                <a href="#BREAK_NUCL_STR">BREAK_NUCL_STR</a>
+                            </li>
+                            <li>
+                                <a href="#C_NUCL_STR">C_NUCL_STR</a>
+                            </li>
+                            <li>
+                                <a href="#currentResultMatrix">currentResultMatrix</a>
+                            </li>
+                            <li>
+                                <a href="#currentSequence3Index">currentSequence3Index</a>
+                            </li>
+                            <li>
+                                <a href="#G_NUCL_STR">G_NUCL_STR</a>
+                            </li>
+                            <li>
+                                <a href="#logs">logs</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#logTextareaContainer">logTextareaContainer</a>
+                            </li>
+                            <li>
+                                <a href="#notifications">notifications</a>
+                            </li>
+                            <li>
+                                <a href="#penaltyRows">penaltyRows</a>
+                            </li>
+                            <li>
+                                <a href="#resultLog">resultLog</a>
+                            </li>
+                            <li>
+                                <a href="#resultPathIndex">resultPathIndex</a>
+                            </li>
+                            <li>
+                                <a href="#resultPaths">resultPaths</a>
+                            </li>
+                            <li>
+                                <a href="#sequence1">sequence1</a>
+                            </li>
+                            <li>
+                                <a href="#sequence2">sequence2</a>
+                            </li>
+                            <li>
+                                <a href="#sequence3">sequence3</a>
+                            </li>
+                            <li>
+                                <a href="#sequenceAligner">sequenceAligner</a>
+                            </li>
+                            <li>
+                                <a href="#sequenceStrArray">sequenceStrArray</a>
+                            </li>
+                            <li>
+                                <a href="#showNextStepBtn">showNextStepBtn</a>
+                            </li>
+                            <li>
+                                <a href="#stepCounter">stepCounter</a>
+                            </li>
+                            <li>
+                                <a href="#T_NUCL_STR">T_NUCL_STR</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#changePathResult">changePathResult</a>
+                            </li>
+                            <li>
+                                <a href="#currentSequence3IndexToLeft">currentSequence3IndexToLeft</a>
+                            </li>
+                            <li>
+                                <a href="#currentSequence3IndexToRight">currentSequence3IndexToRight</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getMatrixValue">getMatrixValue</a>
+                            </li>
+                            <li>
+                                <a href="#nextStep">nextStep</a>
+                            </li>
+                            <li>
+                                <a href="#penaltyChanged">penaltyChanged</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#prepareResultMatrixes">prepareResultMatrixes</a>
+                            </li>
+                            <li>
+                                <a href="#prepareRunningAlgorithm">prepareRunningAlgorithm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#prepareSequenceStrArray">prepareSequenceStrArray</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#processAllCells">processAllCells</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#resetResults">resetResults</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#resetSelected">resetSelected</a>
+                            </li>
+                            <li>
+                                <a href="#resultPathIndexToLeft">resultPathIndexToLeft</a>
+                            </li>
+                            <li>
+                                <a href="#resultPathIndexToRight">resultPathIndexToRight</a>
+                            </li>
+                            <li>
+                                <a href="#runAlgorithm">runAlgorithm</a>
+                            </li>
+                            <li>
+                                <a href="#runStepAlgorithm">runStepAlgorithm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setAlignerPenalties">setAlignerPenalties</a>
+                            </li>
+                            <li>
+                                <a href="#setExampleData">setExampleData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setSolutions">setSolutions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#showError">showError</a>
+                            </li>
+                            <li>
+                                <a href="#validateInputData">validateInputData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor()</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/app.component.ts:44</a></div>
+                                </td>
+                            </tr>
+    
+                </tbody>
+            </table>
+    </section>
+
+
+
+
+
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="changePathResult"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                changePathResult
+                                </b>
+                                <a href="#changePathResult"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>changePathResult()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="279" class="link-to-prism">src/app/app.component.ts:279</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Set resultLog by resultPathIndex.
+    Set selected boolean for result cells</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="currentSequence3IndexToLeft"></a>
+                            <span class="name">
+                                <b>
+                                currentSequence3IndexToLeft
+                                </b>
+                                <a href="#currentSequence3IndexToLeft"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>currentSequence3IndexToLeft()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="251" class="link-to-prism">src/app/app.component.ts:251</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Change currentSequence3Index to left (-1)</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="currentSequence3IndexToRight"></a>
+                            <span class="name">
+                                <b>
+                                currentSequence3IndexToRight
+                                </b>
+                                <a href="#currentSequence3IndexToRight"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>currentSequence3IndexToRight()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="242" class="link-to-prism">src/app/app.component.ts:242</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Change currentSequence3Index to right (+1)</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="getMatrixValue"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                getMatrixValue
+                                </b>
+                                <a href="#getMatrixValue"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>getMatrixValue(i: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, j: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, k: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, scope: )</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="224" class="link-to-prism">src/app/app.component.ts:224</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get value of matrix cell from processed SequenceAligner</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>i</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Index associated with sequence3</p>
+    </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>j</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Index associated with sequence1</p>
+    </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>k</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Index associated with sequence2</p>
+    </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>scope</td>
+                                                      <td>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>this</p>
+    </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="nextStep"></a>
+                            <span class="name">
+                                <b>
+                                nextStep
+                                </b>
+                                <a href="#nextStep"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>nextStep()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">src/app/app.component.ts:177</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Run next step of simulation.
+    If exception - end of step simulation.</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="penaltyChanged"></a>
+                            <span class="name">
+                                <b>
+                                penaltyChanged
+                                </b>
+                                <a href="#penaltyChanged"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>penaltyChanged(event: , rowNucl: , colNucl: )</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/app/app.component.ts:93</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>If penalty matrix cell is changed, change also cell which is associated ((1,2) -&gt; (2,1))</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>event</td>
+                                                      <td>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Event of changed input value</p>
+    </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>rowNucl</td>
+                                                      <td>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Row param</p>
+    </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>colNucl</td>
+                                                      <td>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Col param</p>
+    </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="prepareResultMatrixes"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                prepareResultMatrixes
+                                </b>
+                                <a href="#prepareResultMatrixes"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>prepareResultMatrixes()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="307" class="link-to-prism">src/app/app.component.ts:307</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Prepare data for result 3D matrix.</p>
+    </div>
+    
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="../classes/ResultCell.html" target="_self" >Array&lt;Array&lt;Array&lt;ResultCell&gt;&gt;&gt;</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        <p>3D data of ResultCell objects</p>
+    
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="prepareRunningAlgorithm"></a>
+                            <span class="name">
+                                <b>
+                                prepareRunningAlgorithm
+                                </b>
+                                <a href="#prepareRunningAlgorithm"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>prepareRunningAlgorithm()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/app/app.component.ts:105</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Prepare data for running an algorithm</p>
+    </div>
+    
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        <p>Is validation of input data true</p>
+    
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="prepareSequenceStrArray"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                prepareSequenceStrArray
+                                </b>
+                                <a href="#prepareSequenceStrArray"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>prepareSequenceStrArray(sequence: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="365" class="link-to-prism">src/app/app.component.ts:365</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Sequnce string to array with 1 empty string on the begining (&quot;ATT&quot; -&gt; [&quot; &quot;, &quot;A&quot;, &quot;T&quot;, &quot;T&quot;])</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>sequence</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Sequence of ACTG</p>
+    </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>string[]</code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        <p>One chars array of ACTG</p>
+    
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="processAllCells"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                processAllCells
+                                </b>
+                                <a href="#processAllCells"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>processAllCells(callback: (i: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>,j: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>,k: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>,undefined) => void)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="207" class="link-to-prism">src/app/app.component.ts:207</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Process all result cells with callback function.</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>callback</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Callback function</p>
+    </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="resetResults"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                resetResults
+                                </b>
+                                <a href="#resetResults"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>resetResults()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">src/app/app.component.ts:161</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Reset all result data</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="resetSelected"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                resetSelected
+                                </b>
+                                <a href="#resetSelected"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>resetSelected(i: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, j: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, k: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, scope: )</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="235" class="link-to-prism">src/app/app.component.ts:235</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Reset selected var, used to setting background color of cell.</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>i</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Index associated with sequence3</p>
+    </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>j</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Index associated with sequence1</p>
+    </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>k</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Index associated with sequence2</p>
+    </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>scope</td>
+                                                      <td>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>this</p>
+    </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="resultPathIndexToLeft"></a>
+                            <span class="name">
+                                <b>
+                                resultPathIndexToLeft
+                                </b>
+                                <a href="#resultPathIndexToLeft"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>resultPathIndexToLeft()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="269" class="link-to-prism">src/app/app.component.ts:269</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Change resultPathIndex to left (-1)</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="resultPathIndexToRight"></a>
+                            <span class="name">
+                                <b>
+                                resultPathIndexToRight
+                                </b>
+                                <a href="#resultPathIndexToRight"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>resultPathIndexToRight()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="260" class="link-to-prism">src/app/app.component.ts:260</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Change resultPathIndex to right (+1)</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="runAlgorithm"></a>
+                            <span class="name">
+                                <b>
+                                runAlgorithm
+                                </b>
+                                <a href="#runAlgorithm"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>runAlgorithm()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/app/app.component.ts:125</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Run regular type of algorithm.
+    Setting timeout for show first simulation step of init matrix - (0,0) = 0</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="runStepAlgorithm"></a>
+                            <span class="name">
+                                <b>
+                                runStepAlgorithm
+                                </b>
+                                <a href="#runStepAlgorithm"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>runStepAlgorithm()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">src/app/app.component.ts:152</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Run step type algorithm - enable showNextStepBtn for use.</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="setAlignerPenalties"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                setAlignerPenalties
+                                </b>
+                                <a href="#setAlignerPenalties"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>setAlignerPenalties(aligner: <a href="../classes/SequenceAligner.html">SequenceAligner</a>)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="294" class="link-to-prism">src/app/app.component.ts:294</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Setting aligner penalties</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>aligner</td>
+                                                      <td>
+                                                              <code><a href="../classes/SequenceAligner.html" target="_self" >SequenceAligner</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>SequenceAligner object.</p>
+    </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="setExampleData"></a>
+                            <span class="name">
+                                <b>
+                                setExampleData
+                                </b>
+                                <a href="#setExampleData"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>setExampleData()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/app.component.ts:65</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Set example input data - sequences and penalty matrix</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="setSolutions"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                setSolutions
+                                </b>
+                                <a href="#setSolutions"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>setSolutions()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/app/app.component.ts:141</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Setting found solutions as Array of ResultPath.
+    Init first result as current.</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="showError"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                showError
+                                </b>
+                                <a href="#showError"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>showError(msg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/app/app.component.ts:82</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Show notification (error) section with message</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>msg</td>
+                                                      <td>
+                                                              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Message to show</p>
+    </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="validateInputData"></a>
+                            <span class="name">
+                                <b>
+                                validateInputData
+                                </b>
+                                <a href="#validateInputData"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>validateInputData()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="337" class="link-to-prism">src/app/app.component.ts:337</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Validate input data</p>
+    </div>
+    
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        <p>If validation positive - true, else false</p>
+    
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="A_NUCL_STR"></a>
+                            <span class="name">
+                                <b>
+                                A_NUCL_STR
+                                </b>
+                                <a href="#A_NUCL_STR"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>A_NUCL_STR:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>Constants.A_NUCL</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/app.component.ts:18</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="allResultMatrixes"></a>
+                            <span class="name">
+                                <b>
+                                allResultMatrixes
+                                </b>
+                                <a href="#allResultMatrixes"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>allResultMatrixes:     <code><a href="../classes/ResultCell.html" target="_self" >Array&lt;Array&lt;Array&lt;ResultCell&gt;&gt;&gt;</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="../classes/ResultCell.html" target="_self" >Array&lt;Array&lt;Array&lt;ResultCell&gt;&gt;&gt;</a></code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>[]</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/app.component.ts:34</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="BREAK_NUCL_STR"></a>
+                            <span class="name">
+                                <b>
+                                BREAK_NUCL_STR
+                                </b>
+                                <a href="#BREAK_NUCL_STR"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>BREAK_NUCL_STR:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>Constants.BREAK_NUCL</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/app.component.ts:22</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="C_NUCL_STR"></a>
+                            <span class="name">
+                                <b>
+                                C_NUCL_STR
+                                </b>
+                                <a href="#C_NUCL_STR"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>C_NUCL_STR:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>Constants.C_NUCL</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/app.component.ts:20</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="currentResultMatrix"></a>
+                            <span class="name">
+                                <b>
+                                currentResultMatrix
+                                </b>
+                                <a href="#currentResultMatrix"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>currentResultMatrix:     <code><a href="../classes/ResultCell.html" target="_self" >Array&lt;Array&lt;ResultCell&gt;&gt;</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="../classes/ResultCell.html" target="_self" >Array&lt;Array&lt;ResultCell&gt;&gt;</a></code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>[]</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/app.component.ts:33</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="currentSequence3Index"></a>
+                            <span class="name">
+                                <b>
+                                currentSequence3Index
+                                </b>
+                                <a href="#currentSequence3Index"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>currentSequence3Index:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/app.component.ts:41</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="G_NUCL_STR"></a>
+                            <span class="name">
+                                <b>
+                                G_NUCL_STR
+                                </b>
+                                <a href="#G_NUCL_STR"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>G_NUCL_STR:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>Constants.G_NUCL</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/app.component.ts:19</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="logs"></a>
+                            <span class="name">
+                                <b>
+                                logs
+                                </b>
+                                <a href="#logs"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>logs:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/app.component.ts:36</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="logTextareaContainer"></a>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Private</span>
+                                logTextareaContainer
+                                </b>
+                                <a href="#logTextareaContainer"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <span class="modifier-icon fa fa-reset"></span><code>logTextareaContainer:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Decorators : </i><code>ViewChild</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/app.component.ts:15</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="notifications"></a>
+                            <span class="name">
+                                <b>
+                                notifications
+                                </b>
+                                <a href="#notifications"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>notifications:     <code>Message[]</code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code>Message[]</code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>[]</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/app.component.ts:44</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="penaltyRows"></a>
+                            <span class="name">
+                                <b>
+                                penaltyRows
+                                </b>
+                                <a href="#penaltyRows"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>penaltyRows:     <code><a href="../classes/PenaltyRow.html" target="_self" >Array&lt;PenaltyRow&gt;</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="../classes/PenaltyRow.html" target="_self" >Array&lt;PenaltyRow&gt;</a></code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>[]</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/app.component.ts:28</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="resultLog"></a>
+                            <span class="name">
+                                <b>
+                                resultLog
+                                </b>
+                                <a href="#resultLog"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>resultLog:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/app.component.ts:37</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="resultPathIndex"></a>
+                            <span class="name">
+                                <b>
+                                resultPathIndex
+                                </b>
+                                <a href="#resultPathIndex"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>resultPathIndex:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/app.component.ts:42</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="resultPaths"></a>
+                            <span class="name">
+                                <b>
+                                resultPaths
+                                </b>
+                                <a href="#resultPaths"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>resultPaths:     <code><a href="../classes/ResultPath.html" target="_self" >Array&lt;ResultPath&gt;</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="../classes/ResultPath.html" target="_self" >Array&lt;ResultPath&gt;</a></code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>[]</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/app.component.ts:35</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="sequence1"></a>
+                            <span class="name">
+                                <b>
+                                sequence1
+                                </b>
+                                <a href="#sequence1"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>sequence1:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/app.component.ts:25</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="sequence2"></a>
+                            <span class="name">
+                                <b>
+                                sequence2
+                                </b>
+                                <a href="#sequence2"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>sequence2:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/app.component.ts:26</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="sequence3"></a>
+                            <span class="name">
+                                <b>
+                                sequence3
+                                </b>
+                                <a href="#sequence3"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>sequence3:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/app.component.ts:27</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="sequenceAligner"></a>
+                            <span class="name">
+                                <b>
+                                sequenceAligner
+                                </b>
+                                <a href="#sequenceAligner"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>sequenceAligner:     <code><a href="../classes/SequenceAligner.html" target="_self" >SequenceAligner</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="../classes/SequenceAligner.html" target="_self" >SequenceAligner</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/app.component.ts:32</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="sequenceStrArray"></a>
+                            <span class="name">
+                                <b>
+                                sequenceStrArray
+                                </b>
+                                <a href="#sequenceStrArray"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>sequenceStrArray:     <code>Array&lt;string&gt;</code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code>Array&lt;string&gt;</code>
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>[]</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/app.component.ts:29</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="showNextStepBtn"></a>
+                            <span class="name">
+                                <b>
+                                showNextStepBtn
+                                </b>
+                                <a href="#showNextStepBtn"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>showNextStepBtn:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>false</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/app.component.ts:40</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="stepCounter"></a>
+                            <span class="name">
+                                <b>
+                                stepCounter
+                                </b>
+                                <a href="#stepCounter"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>stepCounter:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/app.component.ts:43</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="T_NUCL_STR"></a>
+                            <span class="name">
+                                <b>
+                                T_NUCL_STR
+                                </b>
+                                <a href="#T_NUCL_STR"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>T_NUCL_STR:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>Constants.T_NUCL</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/app.component.ts:21</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+    </section>
+
+</div>
+
+
+    <div class="tab-pane fade tab-source-code" id="c-source">
+        <pre class="line-numbers"><code class="language-typescript">import {Component, ElementRef, ViewChild} from &#x27;@angular/core&#x27;;
+import { PenaltyRow } from &#x27;../model/penaltyRow&#x27;;
+import {Constants} from &quot;utils/constants&quot;
+import {ResultCell} from &quot;../model/resultCell&quot;;
+import {SequenceAligner} from &quot;../algorithm/algorithm&quot;;
+import {ResultPath} from &quot;../model/resultPath&quot;;
+import {Message} from &quot;primeng/api&quot;;
+
+@Component({
+  selector: &#x27;app-root&#x27;,
+  templateUrl: &#x27;./app.component.html&#x27;,
+  styleUrls: [&#x27;./app.component.css&#x27;]
+})
+export class AppComponent {
+  @ViewChild(&#x27;logTextarea&#x27;) private logTextareaContainer: ElementRef;
+
+  //Nucleotides
+  A_NUCL_STR &#x3D; Constants.A_NUCL;
+  G_NUCL_STR &#x3D; Constants.G_NUCL;
+  C_NUCL_STR &#x3D; Constants.C_NUCL;
+  T_NUCL_STR &#x3D; Constants.T_NUCL;
+  BREAK_NUCL_STR &#x3D; Constants.BREAK_NUCL;
+
+  //Input data
+  sequence1: string;
+  sequence2: string;
+  sequence3: string;
+  penaltyRows: Array&lt;PenaltyRow&gt; &#x3D; [];
+  sequenceStrArray: Array&lt;string&gt; &#x3D; [];
+
+  //Result data
+  sequenceAligner : SequenceAligner;
+  currentResultMatrix: Array&lt;Array&lt;ResultCell&gt;&gt; &#x3D; [];
+  allResultMatrixes: Array&lt;Array&lt;Array&lt;ResultCell&gt;&gt;&gt; &#x3D; [];
+  resultPaths: Array&lt;ResultPath&gt; &#x3D; [];
+  logs : string;
+  resultLog : string;
+
+  //Control data
+  showNextStepBtn &#x3D; false;
+  currentSequence3Index: number;
+  resultPathIndex: number;
+  stepCounter: number;
+  notifications : Message[] &#x3D; [];
+
+  constructor () {
+    this.penaltyRows &#x3D; [
+      new PenaltyRow(this.A_NUCL_STR,null, null, null, null, null),
+      new PenaltyRow(this.G_NUCL_STR,null, null, null, null, null),
+      new PenaltyRow(this.C_NUCL_STR,null, null, null, null, null),
+      new PenaltyRow(this.T_NUCL_STR,null, null, null, null, null),
+      new PenaltyRow(this.BREAK_NUCL_STR,null, null, null, null, null),
+    ];
+    this.sequence1 &#x3D; &quot;&quot;;
+    this.sequence2 &#x3D; &quot;&quot;;
+    this.sequence3 &#x3D; &quot;&quot;;
+    this.currentSequence3Index &#x3D; 0;
+    this.resultPathIndex &#x3D; 0;
+    this.stepCounter &#x3D; 1;
+  }
+
+  /**
+   * Set example input data - sequences and penalty matrix
+   */
+  setExampleData () {
+    this.penaltyRows &#x3D; [
+      new PenaltyRow(this.A_NUCL_STR,6,-5,-4,-6,-5),
+      new PenaltyRow(this.G_NUCL_STR,-5,1,-2,-3,-5),
+      new PenaltyRow(this.C_NUCL_STR,-4,-2,4,2,-5),
+      new PenaltyRow(this.T_NUCL_STR,-6,-3,2,0,-5),
+      new PenaltyRow(this.BREAK_NUCL_STR,-5,-5,-5,-5,0),
+    ];
+    this.sequence1 &#x3D; &quot;AATCCT&quot;;
+    this.sequence2 &#x3D; &quot;CAC&quot;;
+    this.sequence3 &#x3D; &quot;ACCT&quot;;
+  }
+
+  /**
+   * Show notification (error) section with message
+   * @param {string} msg Message to show
+   */
+  private showError(msg: string) {
+    this.notifications &#x3D; [];
+    this.notifications.push({severity:&#x27;error&#x27;, summary:&#x27;Błąd&#x27;, detail:msg});
+  }
+
+  /**
+   * If penalty matrix cell is changed, change also cell which is associated ((1,2) -&gt; (2,1))
+   * @param event Event of changed input value
+   * @param rowNucl Row param
+   * @param colNucl Col param
+   */
+  penaltyChanged(event, rowNucl, colNucl) {
+    let foundRow &#x3D; this.penaltyRows.filter(row &#x3D;&gt;
+      row.label &#x3D;&#x3D;&#x3D; colNucl);
+
+    if (foundRow !&#x3D; null &amp;&amp; foundRow.length &gt; 0)
+      foundRow[0].nuclMap[rowNucl] &#x3D; event.target.value;
+  }
+
+  /**
+   * Prepare data for running an algorithm
+   * @returns {boolean} Is validation of input data true
+   */
+  prepareRunningAlgorithm() : boolean {
+    if (!this.validateInputData())
+      return false;
+
+    this.resetResults();
+    this.sequenceAligner &#x3D; new SequenceAligner(this.sequence1, this.sequence2, this.sequence3);
+    this.setAlignerPenalties(this.sequenceAligner);
+    this.allResultMatrixes &#x3D; this.prepareResultMatrixes();
+    this.setAlignerPenalties(this.sequenceAligner);
+    this.currentResultMatrix &#x3D; this.allResultMatrixes[0];
+    this.logs &#x3D; this.stepCounter + &quot;. &quot; + this.sequenceAligner.getLastStepInfo() + &quot;\n&quot;;
+    this.currentSequence3Index &#x3D; 0;
+    this.sequenceStrArray &#x3D; this.prepareSequenceStrArray(this.sequence3);
+    return true;
+  }
+
+  /**
+   * Run regular type of algorithm.
+   * Setting timeout for show first simulation step of init matrix - (0,0) &#x3D; 0
+   */
+  runAlgorithm () {
+    if (this.prepareRunningAlgorithm()) {
+      this.showNextStepBtn &#x3D; false;
+
+      setTimeout(()&#x3D;&gt;{
+        this.sequenceAligner.doAllSteps();
+        this.processAllCells(this.getMatrixValue);
+        this.setSolutions();
+      },1000);
+    }
+  }
+
+  /**
+   * Setting found solutions as Array of ResultPath.
+   * Init first result as current.
+   */
+  private setSolutions () {
+    let solutions &#x3D; this.sequenceAligner.getSolutions();
+    for (let r &#x3D; 0; r &lt; solutions.length; r +&#x3D; 2) {
+      this.resultPaths.push(new ResultPath(solutions[r], solutions[r + 1], r));
+    }
+    this.changePathResult();
+  }
+
+  /**
+   * Run step type algorithm - enable showNextStepBtn for use.
+   */
+  runStepAlgorithm () {
+    if (this.prepareRunningAlgorithm()) {
+      this.showNextStepBtn &#x3D; true;
+    }
+  }
+
+  /**
+   * Reset all result data
+   */
+  private resetResults () {
+    this.allResultMatrixes &#x3D; [];
+    this.currentResultMatrix &#x3D; [];
+    this.logs &#x3D; &quot;&quot;;
+    this.resultLog &#x3D; &quot;&quot;;
+    this.resultPaths &#x3D; [];
+    this.resultPathIndex &#x3D; 1;
+    this.resultPathIndex &#x3D; 0;
+    this.showNextStepBtn &#x3D; false;
+    this.stepCounter &#x3D; 1;
+  }
+
+  /**
+   * Run next step of simulation.
+   * If exception - end of step simulation.
+   */
+  nextStep () {
+    ++this.stepCounter;
+    try {
+      this.sequenceAligner.doOneStep();
+      this.logs +&#x3D; this.stepCounter + &quot;. &quot; + this.sequenceAligner.getLastStepInfo() + &quot;\n&quot;;
+
+      //If matrix completed, go to next matrix
+      if (this.stepCounter%((this.currentResultMatrix.length - 1)*(this.currentResultMatrix[0].length - 1)) &#x3D;&#x3D; 1)
+        this.currentSequence3IndexToRight();
+    }
+    catch(e) {
+      this.showNextStepBtn &#x3D; false;
+      this.logs +&#x3D; &quot;Algorytm krokowy został zakończony&quot; + &quot;\n&quot;;
+      this.setSolutions();
+    }
+
+    //Automatically scrolling down
+    setTimeout(()&#x3D;&gt;{
+      try {
+        this.logTextareaContainer.nativeElement.scrollTop &#x3D; this.logTextareaContainer.nativeElement.scrollHeight;
+      } catch(err) { }
+    }, 0);
+
+    this.processAllCells(this.getMatrixValue);
+  }
+
+  /**
+   * Process all result cells with callback function.
+   * @param {(i: number, j: number, k: number, scope) &#x3D;&gt; any} callback Callback function
+   */
+  private processAllCells(callback: (i: number, j:number, k:number, scope) &#x3D;&gt; any) : void {
+    for (let i &#x3D; 0; i &lt; this.allResultMatrixes.length; ++i) {
+      for (let j &#x3D; 0; j &lt; (this.allResultMatrixes[i].length - 1); ++j) {
+        for (let k &#x3D; 0; k &lt; (this.allResultMatrixes[i][j].length - 1); ++k) {
+          callback(i,j,k, this);
+        }
+      }
+    }
+  }
+
+  /**
+   * Get value of matrix cell from processed SequenceAligner
+   * @param {number} i Index associated with sequence3
+   * @param {number} j Index associated with sequence1
+   * @param {number} k Index associated with sequence2
+   * @param scope this
+   */
+  private getMatrixValue(i: number, j:number, k:number, scope) : void {
+    scope.allResultMatrixes[i][j + 1][k + 1].value &#x3D; scope.sequenceAligner.getMatrixValue(j,k,i);
+  }
+
+  /**
+   * Reset selected var, used to setting background color of cell.
+   * @param {number} i Index associated with sequence3
+   * @param {number} j Index associated with sequence1
+   * @param {number} k Index associated with sequence2
+   * @param scope this
+   */
+  private resetSelected(i: number, j:number, k:number, scope) : void {
+    scope.allResultMatrixes[i][j + 1][k + 1].selected &#x3D; false;
+  }
+
+  /**
+   * Change currentSequence3Index to right (+1)
+   */
+  currentSequence3IndexToRight() {
+    if (this.currentSequence3Index !&#x3D; this.sequenceStrArray.length - 1)
+      this.currentSequence3Index +&#x3D; 1;
+    this.currentResultMatrix &#x3D; this.allResultMatrixes[this.currentSequence3Index];
+  }
+
+  /**
+   * Change currentSequence3Index to left (-1)
+   */
+  currentSequence3IndexToLeft() {
+    if (this.currentSequence3Index !&#x3D; 0)
+      this.currentSequence3Index -&#x3D; 1;
+    this.currentResultMatrix &#x3D; this.allResultMatrixes[this.currentSequence3Index];
+  }
+
+  /**
+   * Change resultPathIndex to right (+1)
+   */
+  resultPathIndexToRight() {
+    if (this.resultPathIndex !&#x3D; this.resultPaths.length - 1)
+      this.resultPathIndex +&#x3D; 1;
+    this.changePathResult();
+  }
+
+  /**
+   * Change resultPathIndex to left (-1)
+   */
+  resultPathIndexToLeft() {
+    if (this.resultPathIndex !&#x3D; 0)
+      this.resultPathIndex -&#x3D; 1;
+    this.changePathResult();
+  }
+
+  /**
+   * Set resultLog by resultPathIndex.
+   * Set selected boolean for result cells
+   */
+  private changePathResult() {
+    this.processAllCells(this.resetSelected);
+    this.resultLog &#x3D; this.resultPaths[this.resultPathIndex].log;
+
+    let currentResult &#x3D; this.resultPaths[this.resultPathIndex];
+    for (let i &#x3D; 0; i &lt; currentResult.matrixesPositions.length; ++i) {
+      let pos &#x3D; currentResult.matrixesPositions[i];
+      this.allResultMatrixes[pos[2]][pos[0] + 1][pos[1] + 1].selected &#x3D; true;
+    }
+  }
+
+  /**
+   * Setting aligner penalties
+   * @param {SequenceAligner} aligner SequenceAligner object.
+   */
+  private setAlignerPenalties(aligner: SequenceAligner) {
+    this.penaltyRows.forEach(item &#x3D;&gt; {
+      let nucls &#x3D; [this.A_NUCL_STR, this.G_NUCL_STR, this.C_NUCL_STR, this.T_NUCL_STR, this.BREAK_NUCL_STR];
+      nucls.forEach(nucl &#x3D;&gt; {
+        aligner.setPenaltyPair(item.label, nucl, item.nuclMap[nucl]);
+      });
+    })
+  }
+
+  /**
+   * Prepare data for result 3D matrix.
+   * @returns {Array&lt;Array&lt;Array&lt;ResultCell&gt;&gt;&gt;} 3D data of ResultCell objects
+   */
+  private prepareResultMatrixes() : Array&lt;Array&lt;Array&lt;ResultCell&gt;&gt;&gt; {
+    let sequence1StrArray &#x3D; this.prepareSequenceStrArray(this.sequence1);
+    let sequence2StrArray &#x3D; this.prepareSequenceStrArray(this.sequence2);
+    let resultMatrixes: Array&lt;Array&lt;Array&lt;ResultCell&gt;&gt;&gt; &#x3D; [];
+
+    for (let i &#x3D; 0; i &lt; (this.sequence3.length + 1); ++i) {
+      let matrix: Array&lt;Array&lt;ResultCell&gt;&gt; &#x3D; [];
+      for (let i &#x3D; 0; i &lt; sequence1StrArray.length; ++i) {
+        let row &#x3D; Array() as ResultCell[];
+        for (let j &#x3D; 0; j &lt; sequence2StrArray.length; ++j) {
+          let cell &#x3D; new ResultCell(sequence2StrArray[j], sequence1StrArray[i], null);
+          row.push(cell);
+        }
+        row.push(new ResultCell(null, null, null));
+        if (i &#x3D;&#x3D; 0)
+          matrix.push(row);
+        matrix.push(row);
+      }
+      resultMatrixes.push(matrix);
+    }
+
+    //Init first cell of first matrix -&gt; 0
+    resultMatrixes[0][1][1].value &#x3D; 0;
+    return resultMatrixes;
+  }
+
+  /**
+   * Validate input data
+   * @returns {boolean} If validation positive - true, else false
+   */
+  validateInputData() : boolean {
+
+    //At least one sequence empty
+    if (this.sequence1.trim() &#x3D;&#x3D; &quot;&quot; || this.sequence2.trim() &#x3D;&#x3D; &quot;&quot; || this.sequence3.trim() &#x3D;&#x3D; &quot;&quot;) {
+      this.showError(&quot;Pojedyncza sekwencja musi się składać z przynajmniej jednego nukleotydu.&quot;);
+      return false;
+    }
+
+    let nucls &#x3D; [this.A_NUCL_STR, this.G_NUCL_STR, this.C_NUCL_STR, this.T_NUCL_STR, this.BREAK_NUCL_STR];
+
+    //At least one penalty cell empty
+    for (let i &#x3D; 0; i &lt; this.penaltyRows.length; ++i) {
+      nucls.forEach(nucl &#x3D;&gt; {
+        if (this.penaltyRows[i].nuclMap[nucl] &#x3D;&#x3D; null || this.penaltyRows[i].nuclMap[nucl].toString() &#x3D;&#x3D; &quot;&quot;) {
+          this.showError(&quot;Macierz kar i nagród musi być wypełniona.&quot;);
+          return false;
+        }
+      });
+    }
+
+    return true;
+  }
+
+  /**
+   * Sequnce string to array with 1 empty string on the begining (&quot;ATT&quot; -&gt; [&quot; &quot;, &quot;A&quot;, &quot;T&quot;, &quot;T&quot;])
+   * @param {string} sequence Sequence of ACTG
+   * @returns {string[]} One chars array of ACTG
+   */
+  private prepareSequenceStrArray (sequence: string) : string[] {
+    let strResult &#x3D; [];
+    strResult.push(&quot; &quot;);
+    return strResult.concat(sequence.trim().split(&quot;&quot;));
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;p-messages [(value)]&#x3D;&quot;notifications&quot;&gt;&lt;/p-messages&gt;
+  &lt;div class&#x3D;&quot;ui-g&quot;&gt;
+    &lt;div class&#x3D;&quot;ui-g-12&quot;&gt;
+      &lt;p-panel header&#x3D;&quot;Dane wejściowe&quot; [style]&#x3D;&quot;{&#x27;margin-bottom&#x27;:&#x27;20px&#x27;}&quot;&gt;
+        &lt;div class&#x3D;&quot;ui-g&quot;&gt;
+          &lt;div class&#x3D;&quot;ui-g-6&quot;&gt;
+            &lt;span class&#x3D;&quot;ui-float-label&quot; style&#x3D;&quot;margin-top: 15px; margin-bottom: 40px&quot;&gt;
+              &lt;input id&#x3D;&quot;float-input&quot; #input1
+                     (input)&#x3D;&quot;input1.value&#x3D;$event.target.value.toUpperCase(); sequence1 &#x3D; $event.target.value.toUpperCase()&quot;
+                     [(ngModel)]&#x3D;&quot;sequence1&quot; OnlyAGCT&#x3D;&quot;true&quot; type&#x3D;&quot;text&quot; size&#x3D;&quot;50&quot; pInputText&gt;
+              &lt;label for&#x3D;&quot;float-input&quot;&gt;Sekwencja 1&lt;/label&gt;
+            &lt;/span&gt;
+            &lt;span class&#x3D;&quot;ui-float-label&quot; style&#x3D;&quot;margin-bottom: 40px&quot;&gt;
+              &lt;input id&#x3D;&quot;float-input2&quot; #input2
+                     (input)&#x3D;&quot;input2.value&#x3D;$event.target.value.toUpperCase(); sequence2 &#x3D; $event.target.value.toUpperCase()&quot;
+                     [(ngModel)]&#x3D;&quot;sequence2&quot; OnlyAGCT&#x3D;&quot;true&quot; type&#x3D;&quot;text&quot; size&#x3D;&quot;50&quot; pInputText&gt;
+              &lt;label for&#x3D;&quot;float-input2&quot;&gt;Sekwencja 2&lt;/label&gt;
+            &lt;/span&gt;
+            &lt;span class&#x3D;&quot;ui-float-label&quot; style&#x3D;&quot;margin-bottom: 40px&quot;&gt;
+              &lt;input id&#x3D;&quot;float-input3&quot; #input3
+                     (input)&#x3D;&quot;input3.value&#x3D;$event.target.value.toUpperCase(); sequence3 &#x3D; $event.target.value.toUpperCase()&quot;
+                     [(ngModel)]&#x3D;&quot;sequence3&quot; OnlyAGCT&#x3D;&quot;true&quot; type&#x3D;&quot;text&quot; size&#x3D;&quot;50&quot; pInputText&gt;
+              &lt;label for&#x3D;&quot;float-input3&quot;&gt;Sekwencja 3&lt;/label&gt;
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;ui-g-6&quot;&gt;
+            &lt;div class&#x3D;&quot;ui-g-6&quot;&gt;
+              &lt;p-table [value]&#x3D;&quot;penaltyRows&quot;&gt;
+                &lt;ng-template pTemplate&#x3D;&quot;header&quot;&gt;
+                  &lt;tr&gt;
+                    &lt;th&gt;&lt;/th&gt;
+                    &lt;th&gt;{{A_NUCL_STR}}&lt;/th&gt;
+                    &lt;th&gt;{{G_NUCL_STR}}&lt;/th&gt;
+                    &lt;th&gt;{{C_NUCL_STR}}&lt;/th&gt;
+                    &lt;th&gt;{{T_NUCL_STR}}&lt;/th&gt;
+                    &lt;th&gt;{{BREAK_NUCL_STR}}&lt;/th&gt;
+                  &lt;/tr&gt;
+                &lt;/ng-template&gt;
+                &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-row&gt;
+                  &lt;tr style&#x3D;&quot;text-align: center&quot;&gt;
+                    &lt;td class&#x3D;&quot;primeng-panel-color&quot;&gt;{{row.label}}&lt;/td&gt;
+                    &lt;td pEditableColumn&gt;
+                      &lt;p-cellEditor&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;input&quot;&gt;
+                          &lt;input OnlyNumber&#x3D;&quot;true&quot; type&#x3D;&quot;text&quot; (input)&#x3D;&quot;penaltyChanged($event,row.label,A_NUCL_STR)&quot; [(ngModel)]&#x3D;&quot;row.nuclMap[A_NUCL_STR]&quot;&gt;
+                        &lt;/ng-template&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;output&quot;&gt;
+                          {{row.nuclMap[A_NUCL_STR]}}
+                        &lt;/ng-template&gt;
+                      &lt;/p-cellEditor&gt;
+                    &lt;/td&gt;
+                    &lt;td pEditableColumn&gt;
+                      &lt;p-cellEditor&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;input&quot;&gt;
+                          &lt;input OnlyNumber&#x3D;&quot;true&quot; type&#x3D;&quot;text&quot; (input)&#x3D;&quot;penaltyChanged($event,row.label,G_NUCL_STR)&quot; [(ngModel)]&#x3D;&quot;row.nuclMap[G_NUCL_STR]&quot;&gt;
+                        &lt;/ng-template&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;output&quot;&gt;
+                          {{row.nuclMap[G_NUCL_STR]}}
+                        &lt;/ng-template&gt;
+                      &lt;/p-cellEditor&gt;
+                    &lt;/td&gt;
+                    &lt;td pEditableColumn&gt;
+                      &lt;p-cellEditor&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;input&quot;&gt;
+                          &lt;input OnlyNumber&#x3D;&quot;true&quot; type&#x3D;&quot;text&quot; (input)&#x3D;&quot;penaltyChanged($event,row.label,C_NUCL_STR)&quot; [(ngModel)]&#x3D;&quot;row.nuclMap[C_NUCL_STR]&quot;&gt;
+                        &lt;/ng-template&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;output&quot;&gt;
+                          {{row.nuclMap[C_NUCL_STR]}}
+                        &lt;/ng-template&gt;
+                      &lt;/p-cellEditor&gt;
+                    &lt;/td&gt;
+                    &lt;td pEditableColumn&gt;
+                      &lt;p-cellEditor&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;input&quot;&gt;
+                          &lt;input OnlyNumber&#x3D;&quot;true&quot; type&#x3D;&quot;text&quot; (input)&#x3D;&quot;penaltyChanged($event,row.label,T_NUCL_STR)&quot; [(ngModel)]&#x3D;&quot;row.nuclMap[T_NUCL_STR]&quot;&gt;
+                        &lt;/ng-template&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;output&quot;&gt;
+                          {{row.nuclMap[T_NUCL_STR]}}
+                        &lt;/ng-template&gt;
+                      &lt;/p-cellEditor&gt;
+                    &lt;/td&gt;
+                    &lt;td pEditableColumn&gt;
+                      &lt;p-cellEditor&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;input&quot;&gt;
+                          &lt;input OnlyNumber&#x3D;&quot;true&quot; type&#x3D;&quot;text&quot; (input)&#x3D;&quot;penaltyChanged($event,row.label,BREAK_NUCL_STR)&quot; [(ngModel)]&#x3D;&quot;row.nuclMap[BREAK_NUCL_STR]&quot;&gt;
+                        &lt;/ng-template&gt;
+                        &lt;ng-template pTemplate&#x3D;&quot;output&quot;&gt;
+                          {{row.nuclMap[BREAK_NUCL_STR]}}
+                        &lt;/ng-template&gt;
+                      &lt;/p-cellEditor&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/ng-template&gt;
+              &lt;/p-table&gt;
+              &lt;div style&#x3D;&quot;text-align: center; margin-top: 10px; color: #898989;&quot;&gt;
+                &lt;span &gt;MACIERZ KAR I NAGRÓD&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div style&#x3D;&quot;text-align: center; margin-top: 30px&quot;&gt;
+          &lt;button style&#x3D;&quot;width: 22%&quot; pButton type&#x3D;&quot;button&quot; class&#x3D;&quot;ui-button-secondary&quot; (click)&#x3D;&quot;setExampleData()&quot; icon&#x3D;&quot;fa-clipboard&quot; label&#x3D;&quot;Przykładowe dane&quot;&gt;&lt;/button&gt;
+          &lt;button style&#x3D;&quot;width: 22%&quot; pButton type&#x3D;&quot;button&quot; (click)&#x3D;&quot;runAlgorithm()&quot; icon&#x3D;&quot;fa-play&quot; label&#x3D;&quot;Uruchom algorytm&quot;&gt;&lt;/button&gt;
+          &lt;button style&#x3D;&quot;width: 22%&quot; pButton type&#x3D;&quot;button&quot; (click)&#x3D;&quot;runStepAlgorithm()&quot; icon&#x3D;&quot;fa-forward&quot; label&#x3D;&quot;Uruchom algorytm krokowo&quot;&gt;&lt;/button&gt;
+          &lt;button style&#x3D;&quot;width: 22%&quot; pButton type&#x3D;&quot;button&quot; (click)&#x3D;&quot;nextStep()&quot; icon&#x3D;&quot;fa-step-forward&quot; [disabled]&#x3D;&quot;!showNextStepBtn&quot; label&#x3D;&quot;Następny krok&quot;&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/p-panel&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;ui-g-12&quot;&gt;
+      &lt;p-panel header&#x3D;&quot;Wyniki&quot; [style]&#x3D;&quot;{&#x27;margin-bottom&#x27;:&#x27;20px&#x27;}&quot;&gt;
+        &lt;div class&#x3D;&quot;ui-g&quot;&gt;
+          &lt;div class&#x3D;&quot;ui-g-8&quot;&gt;
+            &lt;div *ngIf&#x3D;&quot;sequenceStrArray.length &gt; 0&quot; style&#x3D;&quot;text-align: center; margin-top: 20px; display: inline-flex&quot;&gt;
+              &lt;button style&#x3D;&quot;margin-top: -5px; margin-right: 20px;&quot; pButton type&#x3D;&quot;button&quot; (click)&#x3D;&quot;currentSequence3IndexToLeft()&quot; icon&#x3D;&quot;fa-chevron-left&quot;&gt;&lt;/button&gt;
+              &lt;div&gt;
+                &lt;div style&#x3D;&quot;display: inline-block; margin-right: 5px&quot; *ngFor&#x3D;&quot;let item of sequenceStrArray; let i &#x3D; index&quot;&gt;
+                  {{item}}
+                  &lt;span [ngClass]&#x3D;&quot;{&#x27;current-nucl&#x27; : i &#x3D;&#x3D;&#x3D; currentSequence3Index}&quot; style&#x3D;&quot;margin-left: 5px&quot;&gt;
+                    &amp;#8213;&amp;#8213;&amp;#8213;&amp;#8213;
+                  &lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;button style&#x3D;&quot;margin-top: -5px; margin-left: 15px;&quot; pButton type&#x3D;&quot;button&quot; (click)&#x3D;&quot;currentSequence3IndexToRight()&quot; icon&#x3D;&quot;fa-chevron-right&quot;&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div style&#x3D;&quot;margin: 30px;&quot;&gt;
+              &lt;table class&#x3D;&quot;result-table&quot;&gt;
+                &lt;ng-container *ngFor&#x3D;&quot;let matrix of currentResultMatrix; let i &#x3D; index&quot;&gt;
+                  &lt;tr [ngClass]&#x3D;&quot;{&#x27;tr-label&#x27; : i &#x3D;&#x3D;&#x3D; 0}&quot;&gt;
+                    &lt;ng-container *ngFor&#x3D;&quot;let cell of matrix; let j &#x3D; index&quot;&gt;
+                      &lt;td *ngIf&#x3D;&quot;i &#x3D;&#x3D; 0&quot;&gt;
+                        &lt;span class&#x3D;&quot;result-table-label&quot;&gt;
+                        {{cell.labelX}}
+                      &lt;/span&gt;
+                      &lt;/td&gt;
+                      &lt;span *ngIf&#x3D;&quot;j &#x3D;&#x3D; 0 &amp;&amp; i !&#x3D; 0&quot; class&#x3D;&quot;result-table-label&quot;&gt;
+                        {{cell.labelY}}
+                      &lt;/span&gt;
+                      &lt;td [ngClass]&#x3D;&quot;{&#x27;selected-cell&#x27; : cell.selected}&quot;  *ngIf&#x3D;&quot;!(i &#x3D;&#x3D; 0 || (j &#x3D;&#x3D; 0 &amp;&amp; i !&#x3D; 0))&quot;&gt;
+                        &lt;span&gt;
+                          {{cell.value}}
+                        &lt;/span&gt;
+                      &lt;/td&gt;
+                    &lt;/ng-container&gt;
+                  &lt;/tr&gt;
+                &lt;/ng-container&gt;
+              &lt;/table&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;ui-g-4&quot;&gt;
+            &lt;div *ngIf&#x3D;&quot;resultPaths.length &gt; 0&quot;&gt;
+              &lt;textarea [(ngModel)]&#x3D;&quot;resultLog&quot; rows&#x3D;&quot;10&quot; class&#x3D;&quot;log-textarea&quot;
+                        pInputTextarea disabled&#x3D;&quot;true&quot;&gt;
+              &lt;/textarea&gt;
+              &lt;div style&#x3D;&quot;text-align: center; margin-top: 10px; color: #898989;&quot;&gt;
+                &lt;span &gt;
+                  &lt;div style&#x3D;&quot;text-align: center; margin-top: 20px; margin-bottom: 20px; display: inline-flex&quot;&gt;
+                    &lt;button style&#x3D;&quot;margin-top: -5px; margin-right: 20px;&quot; pButton type&#x3D;&quot;button&quot; (click)&#x3D;&quot;resultPathIndexToLeft()&quot; icon&#x3D;&quot;fa-chevron-left&quot;&gt;&lt;/button&gt;
+                      &lt;div&gt;Rezultat {{resultPathIndex + 1}}/{{resultPaths.length}}&lt;/div&gt;
+                    &lt;button style&#x3D;&quot;margin-top: -5px; margin-left: 15px;&quot; pButton type&#x3D;&quot;button&quot; (click)&#x3D;&quot;resultPathIndexToRight()&quot; icon&#x3D;&quot;fa-chevron-right&quot;&gt;&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/span&gt;
+              &lt;/div&gt;
+              &lt;br&gt;
+            &lt;/div&gt;
+            &lt;textarea #logTextarea [(ngModel)]&#x3D;&quot;logs&quot; rows&#x3D;&quot;15&quot; class&#x3D;&quot;log-textarea&quot;
+                      pInputTextarea disabled&#x3D;&quot;true&quot;&gt;
+            &lt;/textarea&gt;
+            &lt;div style&#x3D;&quot;text-align: center; margin-top: 10px; color: #898989;&quot;&gt;
+              &lt;span &gt;LOGI KROKÓW&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/p-panel&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <p-messages [(value)]="notifications"></p-messages>  <div class="ui-g">    <div class="ui-g-12">      <p-panel header="Dane wejściowe" [style]="{\'margin-bottom\':\'20px\'}">        <div class="ui-g">          <div class="ui-g-6">            <span class="ui-float-label" style="margin-top: 15px; margin-bottom: 40px">              <input id="float-input" #input1                     (input)="input1.value=$event.target.value.toUpperCase(); sequence1 = $event.target.value.toUpperCase()"                     [(ngModel)]="sequence1" OnlyAGCT="true" type="text" size="50" pInputText>              <label for="float-input">Sekwencja 1</label>            </span>            <span class="ui-float-label" style="margin-bottom: 40px">              <input id="float-input2" #input2                     (input)="input2.value=$event.target.value.toUpperCase(); sequence2 = $event.target.value.toUpperCase()"                     [(ngModel)]="sequence2" OnlyAGCT="true" type="text" size="50" pInputText>              <label for="float-input2">Sekwencja 2</label>            </span>            <span class="ui-float-label" style="margin-bottom: 40px">              <input id="float-input3" #input3                     (input)="input3.value=$event.target.value.toUpperCase(); sequence3 = $event.target.value.toUpperCase()"                     [(ngModel)]="sequence3" OnlyAGCT="true" type="text" size="50" pInputText>              <label for="float-input3">Sekwencja 3</label>            </span>          </div>          <div class="ui-g-6">            <div class="ui-g-6">              <p-table [value]="penaltyRows">                <ng-template pTemplate="header">                  <tr>                    <th></th>                    <th>{{A_NUCL_STR}}</th>                    <th>{{G_NUCL_STR}}</th>                    <th>{{C_NUCL_STR}}</th>                    <th>{{T_NUCL_STR}}</th>                    <th>{{BREAK_NUCL_STR}}</th>                  </tr>                </ng-template>                <ng-template pTemplate="body" let-row>                  <tr style="text-align: center">                    <td class="primeng-panel-color">{{row.label}}</td>                    <td pEditableColumn>                      <p-cellEditor>                        <ng-template pTemplate="input">                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,A_NUCL_STR)" [(ngModel)]="row.nuclMap[A_NUCL_STR]">                        </ng-template>                        <ng-template pTemplate="output">                          {{row.nuclMap[A_NUCL_STR]}}                        </ng-template>                      </p-cellEditor>                    </td>                    <td pEditableColumn>                      <p-cellEditor>                        <ng-template pTemplate="input">                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,G_NUCL_STR)" [(ngModel)]="row.nuclMap[G_NUCL_STR]">                        </ng-template>                        <ng-template pTemplate="output">                          {{row.nuclMap[G_NUCL_STR]}}                        </ng-template>                      </p-cellEditor>                    </td>                    <td pEditableColumn>                      <p-cellEditor>                        <ng-template pTemplate="input">                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,C_NUCL_STR)" [(ngModel)]="row.nuclMap[C_NUCL_STR]">                        </ng-template>                        <ng-template pTemplate="output">                          {{row.nuclMap[C_NUCL_STR]}}                        </ng-template>                      </p-cellEditor>                    </td>                    <td pEditableColumn>                      <p-cellEditor>                        <ng-template pTemplate="input">                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,T_NUCL_STR)" [(ngModel)]="row.nuclMap[T_NUCL_STR]">                        </ng-template>                        <ng-template pTemplate="output">                          {{row.nuclMap[T_NUCL_STR]}}                        </ng-template>                      </p-cellEditor>                    </td>                    <td pEditableColumn>                      <p-cellEditor>                        <ng-template pTemplate="input">                          <input OnlyNumber="true" type="text" (input)="penaltyChanged($event,row.label,BREAK_NUCL_STR)" [(ngModel)]="row.nuclMap[BREAK_NUCL_STR]">                        </ng-template>                        <ng-template pTemplate="output">                          {{row.nuclMap[BREAK_NUCL_STR]}}                        </ng-template>                      </p-cellEditor>                    </td>                  </tr>                </ng-template>              </p-table>              <div style="text-align: center; margin-top: 10px; color: #898989;">                <span >MACIERZ KAR I NAGRÓD</span>              </div>            </div>          </div>        </div>        <div style="text-align: center; margin-top: 30px">          <button style="width: 22%" pButton type="button" class="ui-button-secondary" (click)="setExampleData()" icon="fa-clipboard" label="Przykładowe dane"></button>          <button style="width: 22%" pButton type="button" (click)="runAlgorithm()" icon="fa-play" label="Uruchom algorytm"></button>          <button style="width: 22%" pButton type="button" (click)="runStepAlgorithm()" icon="fa-forward" label="Uruchom algorytm krokowo"></button>          <button style="width: 22%" pButton type="button" (click)="nextStep()" icon="fa-step-forward" [disabled]="!showNextStepBtn" label="Następny krok"></button>        </div>      </p-panel>    </div>    <div class="ui-g-12">      <p-panel header="Wyniki" [style]="{\'margin-bottom\':\'20px\'}">        <div class="ui-g">          <div class="ui-g-8">            <div *ngIf="sequenceStrArray.length > 0" style="text-align: center; margin-top: 20px; display: inline-flex">              <button style="margin-top: -5px; margin-right: 20px;" pButton type="button" (click)="currentSequence3IndexToLeft()" icon="fa-chevron-left"></button>              <div>                <div style="display: inline-block; margin-right: 5px" *ngFor="let item of sequenceStrArray; let i = index">                  {{item}}                  <span [ngClass]="{\'current-nucl\' : i === currentSequence3Index}" style="margin-left: 5px">                    &#8213;&#8213;&#8213;&#8213;                  </span>                </div>              </div>              <button style="margin-top: -5px; margin-left: 15px;" pButton type="button" (click)="currentSequence3IndexToRight()" icon="fa-chevron-right"></button>            </div>            <div style="margin: 30px;">              <table class="result-table">                <ng-container *ngFor="let matrix of currentResultMatrix; let i = index">                  <tr [ngClass]="{\'tr-label\' : i === 0}">                    <ng-container *ngFor="let cell of matrix; let j = index">                      <td *ngIf="i == 0">                        <span class="result-table-label">                        {{cell.labelX}}                      </span>                      </td>                      <span *ngIf="j == 0 && i != 0" class="result-table-label">                        {{cell.labelY}}                      </span>                      <td [ngClass]="{\'selected-cell\' : cell.selected}"  *ngIf="!(i == 0 || (j == 0 && i != 0))">                        <span>                          {{cell.value}}                        </span>                      </td>                    </ng-container>                  </tr>                </ng-container>              </table>            </div>          </div>          <div class="ui-g-4">            <div *ngIf="resultPaths.length > 0">              <textarea [(ngModel)]="resultLog" rows="10" class="log-textarea"                        pInputTextarea disabled="true">              </textarea>              <div style="text-align: center; margin-top: 10px; color: #898989;">                <span >                  <div style="text-align: center; margin-top: 20px; margin-bottom: 20px; display: inline-flex">                    <button style="margin-top: -5px; margin-right: 20px;" pButton type="button" (click)="resultPathIndexToLeft()" icon="fa-chevron-left"></button>                      <div>Rezultat {{resultPathIndex + 1}}/{{resultPaths.length}}</div>                    <button style="margin-top: -5px; margin-left: 15px;" pButton type="button" (click)="resultPathIndexToRight()" icon="fa-chevron-right"></button>                  </div>                </span>              </div>              <br>            </div>            <textarea #logTextarea [(ngModel)]="logs" rows="15" class="log-textarea"                      pInputTextarea disabled="true">            </textarea>            <div style="text-align: center; margin-top: 10px; color: #898989;">              <span >LOGI KROKÓW</span>            </div>          </div>        </div>      </p-panel>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'}];
+    var DIRECTIVES = [{'name': 'OnlyAGCT', 'selector': '[OnlyAGCT]'},{'name': 'OnlyNumber', 'selector': '[OnlyNumber]'}];
+    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>
