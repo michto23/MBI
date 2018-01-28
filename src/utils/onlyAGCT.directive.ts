@@ -27,7 +27,7 @@ export class OnlyAGCT {
         return;
       }
       // Ensure that it is a number and stop the keypress
-      if ([65, 67, 71, 84, 189].indexOf(e.keyCode) === -1) {
+      if ([65, 67, 71, 84].indexOf(e.keyCode) === -1) {
         e.preventDefault();
       }
     }

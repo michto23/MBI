@@ -1,4 +1,4 @@
-import {Component, ElementRef, Pipe, PipeTransform, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import { PenaltyRow } from '../model/penaltyRow';
 import {Constants} from "utils/constants"
 import {ResultCell} from "../model/resultCell";
@@ -167,6 +167,7 @@ export class AppComponent {
     this.resultPathIndex = 1;
     this.resultPathIndex = 0;
     this.showNextStepBtn = false;
+    this.stepCounter = 1;
   }
 
   /**
