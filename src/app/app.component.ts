@@ -1,10 +1,6 @@
-import {Component, ElementRef, Pipe, PipeTransform, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import { PenaltyRow } from '../model/penaltyRow';
-import {FormControl} from "@angular/forms";
-import {Observable} from "rxjs/Observable";
-import {map, startWith} from "rxjs/operators";
 import {Constants} from "utils/constants"
-import {MatAutocompleteSelectedEvent, MatDatepickerInputEvent} from "@angular/material";
 import {ResultCell} from "../model/resultCell";
 import {SequenceAligner} from "../algorithm/algorithm";
 import {ResultPath} from "../model/resultPath";
@@ -68,15 +64,15 @@ export class AppComponent {
    */
   setExampleData () {
     this.penaltyRows = [
-      new PenaltyRow(this.A_NUCL_STR,10,-1,-3,-4,-5),
-      new PenaltyRow(this.G_NUCL_STR,-1,7,-5,-3,-5),
-      new PenaltyRow(this.C_NUCL_STR,-3,-5,9,0,-5),
-      new PenaltyRow(this.T_NUCL_STR,-4,-3,0,8,-5),
+      new PenaltyRow(this.A_NUCL_STR,6,-5,-4,-6,-5),
+      new PenaltyRow(this.G_NUCL_STR,-5,1,-2,-3,-5),
+      new PenaltyRow(this.C_NUCL_STR,-4,-2,4,2,-5),
+      new PenaltyRow(this.T_NUCL_STR,-6,-3,2,0,-5),
       new PenaltyRow(this.BREAK_NUCL_STR,-5,-5,-5,-5,0),
     ];
-    this.sequence1 = "TATACC";
-    this.sequence2 = "TA";
-    this.sequence3 = "TACC";
+    this.sequence1 = "AATCCT";
+    this.sequence2 = "CAC";
+    this.sequence3 = "ACCT";
   }
 
   /**
@@ -171,6 +167,7 @@ export class AppComponent {
     this.resultPathIndex = 1;
     this.resultPathIndex = 0;
     this.showNextStepBtn = false;
+    this.stepCounter = 1;
   }
 
   /**
